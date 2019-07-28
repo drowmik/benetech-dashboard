@@ -1,4 +1,4 @@
-# Gulp setup for pug and sass/scss
+# Benetech
 
 ## Requirements ##
 * `node`: `8.16.0`
