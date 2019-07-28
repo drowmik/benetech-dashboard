@@ -1,0 +1,33 @@
+{
+  "name": "benetech",
+  "version": "1.0.0",
+  "description": "benetech admin dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Debashis Roy Bhowmik",
+  "developer": "Debashis Roy Bhowmik",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserslist": [
+    "last 10 versions",
+    "cover 99.5%",
+    "Firefox > 35",
+    "Firefox ESR",
+    "safari 5",
+    "ie 8-11",
+    "opera 12.1",
+    "ios 6",
+    "android 4"
+  ]
+}
