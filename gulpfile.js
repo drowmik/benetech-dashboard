@@ -72,10 +72,32 @@ function watch() {
 
     // watch for these file changes
     gulp.watch('./src/scss/**/*.scss', style);
-    gulp.watch('./src/pug/*.pug', template);
+    gulp.watch('./src/pug/**/*.pug', template);
     gulp.watch('./build/*.js').on('change', browser_sync.reload);
 }
+
+function build_style() {
+    return gulp.src('./src/scss/*.scss')
+        .pipe(sass({
+            outputStyle:'compressed'
+        }))
+        .pipe(auto_prefixer())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./build/css'))
+}
+
+function build_template() {
+    return gulp.src('src/pug/*.pug')
+        .pipe(pug({
+            pretty: '\t'
+        }))
+        .pipe(gulp.dest('./build'))
+        .pipe(browser_sync.stream());
+}
+
+var build = gulp.series(gulp.parallel(build_style, build_template));
 
 exports.style = style;
 exports.template = template;
 exports.watch = watch;
+exports.build = build;

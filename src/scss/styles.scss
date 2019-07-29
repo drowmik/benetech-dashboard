@@ -1,8 +1,10 @@
 @import "vendor/bootstrap/_bootstrap";
-@import "vendor/fa-all.min.scss";
 
 body {
     background-color: #3ee;
     transition: 1s all;
 }
 
+main {
+    height: calc(100vh - 56px);
+}

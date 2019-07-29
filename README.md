@@ -1,4 +1,4 @@
-# Benetech
+# Benetech Dashboard
 
 ## Requirements ##
 * `node`: `8.16.0`

@@ -4,26 +4,72 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Title</title>
-		<link rel="icon" size="16x16" href="images/favicon.ico">
+		<title>Benetech | Dashboard</title>
+		<link rel="icon" size="128x128" type="image/png" href="images/favicon.png">
 		<link rel="stylesheet" href="css/styles.min.css">
 	</head>
 	<body>
-		<button class="btn btn-primary"><i class="fas fa-user"></i>bootstrap working + pug!</button>
-		<div class="container">
-			<div class="row">
-				<div class="col-5">grid 5</div>
-				<div class="col-7">
-					<div class="d-flex">flex grid 7</div>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary"><a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+						<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
 				</div>
+			</nav>
+		</header>
+		<div class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<aside class="col-12 col-md-3 col-xl-2 bd-sidebar bg-light">
+					<form class="bd-search d-flex align-items-center"><span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
+							<input class="form-control ds-input" id="search-input" type="search" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.3" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+							<pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" id="algolia-autocomplete-listbox-0" role="listbox" style="position: absolute; top: 100%; z-index: 100; left: 0px; right: auto; display: none;">
+								<div class="ds-dataset-1"></div></span></span>
+						<button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false">
+								<title>Menu</title>
+								<path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path>
+							</svg>
+						</button>
+					</form>
+					<nav class="collapse bd-links" id="bd-docs-nav">
+						<div class="bd-toc-item"><a class="bd-toc-link" href="/docs/4.3/getting-started/introduction/">Getting started</a>
+							<ul class="nav bd-sidenav">
+								<li><a href="/docs/4.3/getting-started/introduction/">Introduction</a></li>
+								<li><a href="/docs/4.3/getting-started/download/">Download</a></li>
+							</ul>
+						</div>
+						<div class="bd-toc-item"><a class="bd-toc-link" href="/docs/4.3/layout/overview/">Layout</a>
+							<ul class="nav bd-sidenav">
+								<li><a href="/docs/4.3/layout/overview/">Overview</a></li>
+								<li><a href="/docs/4.3/layout/grid/">Grid</a></li>
+							</ul>
+						</div>
+					</nav>
+				</aside>
+				<main class="col-md-9" role="main">
+					<h1 class="bd-title" id="content">Navbar</h1>
+				</main>
 			</div>
 		</div>
+		<aside></aside>
+		<div></div>
+		<footer></footer>
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<!-- jquery 3.3.1-->
 		<script src="js/popper.min.js"></script>
-		<!-- popper for bootstrap-->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- bootstrap-->
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

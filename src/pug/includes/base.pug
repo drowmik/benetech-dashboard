@@ -1,0 +1,100 @@
+block variables
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+        title Benetech | #{title}
+
+        link(rel='icon', size='128x128', type='image/png' href='images/favicon.png')
+
+        block head_css
+            link(rel='stylesheet', href='css/styles.min.css')
+    body
+        block header
+            header
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+                    a.navbar-brand(href='#') Navbar
+                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    #navbarSupportedContent.collapse.navbar-collapse
+                        ul.navbar-nav.mr-auto
+                            li.nav-item.active
+                                a.nav-link(href='#')
+                                    | Home 
+                                    span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href='#') Link
+                            li.nav-item.dropdown
+                                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                    | Dropdown
+                                .dropdown-menu(aria-labelledby='navbarDropdown')
+                                    a.dropdown-item(href='#') Action
+                                    a.dropdown-item(href='#') Another action
+                                    .dropdown-divider
+                                    a.dropdown-item(href='#') Something else here
+                            li.nav-item
+                                a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+                        form.form-inline.my-2.my-lg-0
+                            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+                            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+
+        block main_body
+            .container-fluid
+                .row.flex-xl-nowrap
+                    block sidebar
+                        aside.col-12.col-md-3.col-xl-2.bd-sidebar.bg-light
+                            form.bd-search.d-flex.align-items-center
+                                span.algolia-autocomplete(style='position: relative; display: inline-block; direction: ltr;')
+                                    input#search-input.form-control.ds-input(type='search', placeholder='Search...', aria-label='Search for...', autocomplete='off', data-docs-version='4.3', spellcheck='false', role='combobox', aria-autocomplete='list', aria-expanded='false', aria-owns='algolia-autocomplete-listbox-0', dir='auto', style='position: relative; vertical-align: top;')
+                                    pre(aria-hidden='true', style='position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;').
+                                    span#algolia-autocomplete-listbox-0.ds-dropdown-menu(role='listbox', style='position: absolute; top: 100%; z-index: 100; left: 0px; right: auto; display: none;')
+                                        .ds-dataset-1
+                                button.btn.btn-link.bd-search-docs-toggle.d-md-none.p-0.ml-3(type='button', data-toggle='collapse', data-target='#bd-docs-nav', aria-controls='bd-docs-nav', aria-expanded='false', aria-label='Toggle docs navigation')
+                                    svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewBox='0 0 30 30', role='img', focusable='false')
+                                        title Menu
+                                        path(stroke='currentColor', stroke-linecap='round', stroke-miterlimit='10', stroke-width='2', d='M4 7h22M4 15h22M4 23h22')
+                            nav#bd-docs-nav.collapse.bd-links
+                                .bd-toc-item
+                                    a.bd-toc-link(href='/docs/4.3/getting-started/introduction/')
+                                        | Getting started
+                                    ul.nav.bd-sidenav
+                                        li
+                                            a(href='/docs/4.3/getting-started/introduction/')
+                                                | Introduction
+                                        li
+                                            a(href='/docs/4.3/getting-started/download/')
+                                                | Download
+                                .bd-toc-item
+                                    a.bd-toc-link(href='/docs/4.3/layout/overview/')
+                                        | Layout
+                                    ul.nav.bd-sidenav
+                                        li
+                                            a(href='/docs/4.3/layout/overview/')
+                                                | Overview
+                                        li
+                                            a(href='/docs/4.3/layout/grid/')
+                                                | Grid
+
+                    block content
+                        main.col-md-9(role='main')
+                            h1#content.bd-title Navbar
+
+
+        block sidebar
+            aside
+
+        block content
+            div
+        
+        block footer
+            footer
+
+        block bottom_js
+            script(src='js/jquery-3.3.1.min.js')
+            script(src='js/popper.min.js')
+            script(src='js/bootstrap.min.js')
+            script(src='js/scripts.js')
