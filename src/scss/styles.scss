@@ -1,10 +1,5 @@
 @import "vendor/bootstrap/_bootstrap";
+@import "variables";
 
-body {
-    background-color: #3ee;
-    transition: 1s all;
-}
+@import 'table';
 
-main {
-    height: calc(100vh - 56px);
-}

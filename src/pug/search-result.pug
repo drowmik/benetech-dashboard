@@ -1,0 +1,122 @@
+extends includes/base.pug
+
+block variables
+    - var title = "Search Result";
+
+block content
+    #filter-options.bg-primary
+        form.position-relative(action="#")
+            .d-flex
+                .form-group
+                    label Patient Code
+                    input.form-control(type="text", name="patient-code")
+                .form-group
+                    label Second Name
+                    input.form-control(type="text", name="second-name")
+                .form-group
+                    label First Name
+                    input.form-control(type="text", name="first-name")
+                .form-group
+                    label Birth Date
+                    input.form-control(type="date", name="birth-date")
+                .form-group
+                    label Panels
+                    input.form-control(type="text", name="panels")
+                .form-group
+                    label Specimen
+                    input.form-control(type="text", name="specimen")
+                .form-group
+                    label Work Code
+                    input.form-control(type="text", name="work-code")
+                //-.form-group
+                    label Worklist
+                    input.form-control(type="text", name="worklist")
+                .form-group
+                    label Requisition Status
+                    select.form-control(name="requisition")
+                        option All
+                        option Yes
+                        option No
+            .d-flex#advanced-options
+                .form-group
+                    label Worklist
+                    input.form-control(type="text", name="worklist")
+                .form-group
+                    label Advanced Date Search
+                    select.form-control(name="advance-date-search")
+                        option Specimen Date
+                        option Yes Date
+                        option No Date
+                .form-group
+                    label Start Date (from)
+                    select.form-control(name="start-date")
+                        option 05-05-05
+                        option 05-05-06
+                        option 05-05-07
+                .form-group
+                    label End Date (to)
+                    select.form-control(name="end-date")
+                        option 05-05-05
+                        option 05-05-06
+                        option 05-05-07
+
+            .position-absolute.w-100.d-flex.justify-content-between
+                a.btn.btn-info.bt-btn(href="#") Show Advanced Search
+                .d-flex
+                    a.btn.btn-info.bt-btn(href="#") New Search
+                    button.btn.btn-warning.bt-btn(type="submit") Search
+
+    #search-content.px-3
+        .mt-5
+            h2.d-inline-block Search Patient:
+            span 333 333 results
+
+        #search-table-wrapper
+            table.table.table-striped.bg-white.text-center
+                thead.thead-primary.text-left
+                    tr
+                        th(scope='col') Pat.Code
+                        th(scope='col') Last Name
+                        th(scope='col') First Name
+                        th(scope='col') DOB
+                        th(scope='col') LMP
+                        th(scope='col') Panel
+                        th(scope='col') Status
+                        th(scope='col') Spec.Date
+                        th(scope='col') Specimen
+                        th(scope='col') Work Code
+                        th(scope='col') Worklist
+                tbody
+                    -for(i = 0; i < 12; i++)
+                        tr
+                            td PCODE_1000
+                            td Kamalidadadad
+                            td Anastas
+                            td 05-05-05
+                            td 05-05-05
+                            td MS QUAD
+                            td Inclomplete
+                            td 05-05-05
+                            td 05050500
+                            td WC_3333
+                            td 19819389-MO-1
+            nav(aria-label='Pagination')
+                ul.pagination
+                    li.page-item.disabled
+                        a.page-link(href='#')
+                            img(src="images/caret-left.png")
+                    li.page-item
+                        a.page-link(href='#') 1
+                    li.page-item.active
+                        span.page-link 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        span.page-link ...
+                    li.page-item
+                        a.page-link(href='#') 23
+                    li.page-item
+                        a.page-link(href='#')
+                            img(src="images/caret-right.png")
+
+

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Benetech | Search Result</title>
+		<link rel="icon" size="128x128" type="image/png" href="images/favicon.png">
+		<link rel="stylesheet" href="css/styles.min.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu-top" aria-controls="main-menu-top" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="main-menu-top">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active"><a class="nav-link" href="#">Patient</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Screening</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+						<li class="nav-item nav-cta"><a class="nav-link" href="#">Add Patient</a></li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Type here..." aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="images/search.png"></button>
+					</form>
+					<div class="top-nav-logout"><a href="#"><img src="images/logout.png"></a></div>
+				</div>
+			</nav>
+		</header>
+		<div class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<aside class="col-12 col-md-1 bt-sidebar bg-white">
+					<nav>
+						<ul class="list-unstyled">
+							<li><a href="#"><img src="images/sidebar/add.png"></a></li>
+							<li><a href="#"><img src="images/sidebar/find.png"></a></li>
+							<li><a href="#"><img src="images/sidebar/edit.png"></a></li>
+							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+						</ul>
+					</nav>
+				</aside>
+				<main class="col-md-11 pl-md-0" role="main">
+					<div class="bg-primary" id="filter-options">
+						<form class="position-relative" action="#">
+							<div class="d-flex">
+								<div class="form-group">
+									<label>Patient Code</label>
+									<input class="form-control" type="text" name="patient-code">
+								</div>
+								<div class="form-group">
+									<label>Second Name</label>
+									<input class="form-control" type="text" name="second-name">
+								</div>
+								<div class="form-group">
+									<label>First Name</label>
+									<input class="form-control" type="text" name="first-name">
+								</div>
+								<div class="form-group">
+									<label>Birth Date</label>
+									<input class="form-control" type="date" name="birth-date">
+								</div>
+								<div class="form-group">
+									<label>Panels</label>
+									<input class="form-control" type="text" name="panels">
+								</div>
+								<div class="form-group">
+									<label>Specimen</label>
+									<input class="form-control" type="text" name="specimen">
+								</div>
+								<div class="form-group">
+									<label>Work Code</label>
+									<input class="form-control" type="text" name="work-code">
+								</div>
+								<div class="form-group">
+									<label>Requisition Status</label>
+									<select class="form-control" name="requisition">
+										<option>All</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
+								</div>
+							</div>
+							<div class="d-flex" id="advanced-options">
+								<div class="form-group">
+									<label>Worklist</label>
+									<input class="form-control" type="text" name="worklist">
+								</div>
+								<div class="form-group">
+									<label>Advanced Date Search</label>
+									<select class="form-control" name="advance-date-search">
+										<option>Specimen Date</option>
+										<option>Yes Date</option>
+										<option>No Date</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Start Date (from)</label>
+									<select class="form-control" name="start-date">
+										<option>05-05-05</option>
+										<option>05-05-06</option>
+										<option>05-05-07</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>End Date (to)</label>
+									<select class="form-control" name="end-date">
+										<option>05-05-05</option>
+										<option>05-05-06</option>
+										<option>05-05-07</option>
+									</select>
+								</div>
+							</div>
+							<div class="position-absolute w-100 d-flex justify-content-between"><a class="btn btn-info bt-btn" href="#">Show Advanced Search</a>
+								<div class="d-flex"><a class="btn btn-info bt-btn" href="#">New Search</a>
+									<button class="btn btn-warning bt-btn" type="submit">Search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="px-3" id="search-content">
+						<div class="mt-5">
+							<h2 class="d-inline-block">Search Patient:</h2><span>333 333 results</span>
+						</div>
+						<div id="search-table-wrapper">
+							<table class="table table-striped bg-white text-center">
+								<thead class="thead-primary text-left">
+									<tr>
+										<th scope="col">Pat.Code</th>
+										<th scope="col">Last Name</th>
+										<th scope="col">First Name</th>
+										<th scope="col">DOB</th>
+										<th scope="col">LMP</th>
+										<th scope="col">Panel</th>
+										<th scope="col">Status</th>
+										<th scope="col">Spec.Date</th>
+										<th scope="col">Specimen</th>
+										<th scope="col">Work Code</th>
+										<th scope="col">Worklist</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+									<tr>
+										<td>PCODE_1000</td>
+										<td>Kamalidadadad</td>
+										<td>Anastas</td>
+										<td>05-05-05</td>
+										<td>05-05-05</td>
+										<td>MS QUAD</td>
+										<td>Inclomplete</td>
+										<td>05-05-05</td>
+										<td>05050500</td>
+										<td>WC_3333</td>
+										<td>19819389-MO-1</td>
+									</tr>
+								</tbody>
+							</table>
+							<nav aria-label="Pagination">
+								<ul class="pagination">
+									<li class="page-item disabled"><a class="page-link" href="#"><img src="images/caret-left.png"></a></li>
+									<li class="page-item"><a class="page-link" href="#">1</a></li>
+									<li class="page-item active"><span class="page-link">2</span></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><span class="page-link">...</span></li>
+									<li class="page-item"><a class="page-link" href="#">23</a></li>
+									<li class="page-item"><a class="page-link" href="#"><img src="images/caret-right.png"></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<footer></footer>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
