@@ -1,0 +1,28 @@
+#reports-nav{
+    &>ul.nav {
+        -webkit-overflow-scrolling: touch;
+        height: 100px; // change
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: block;
+        //&::-webkit-scrollbar {
+            //display: none;
+        //}
+        &>li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        // width
+        &::-webkit-scrollbar {
+            height: 4px;
+        }
+        // Handle
+        &::-webkit-scrollbar-thumb {
+            background: #d86058; 
+            border-radius: 10px;
+        }
+    }
+}
+

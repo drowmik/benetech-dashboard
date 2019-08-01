@@ -1,3 +1,10 @@
 var log = console.log;
 
-log("Js working");
+(function ($) {
+    $(document).ready(function () {
+        $('#reports-nav-tab .reports-nav-item>.nav-link').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+})(jQuery)

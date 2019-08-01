@@ -1,0 +1,358 @@
+extends includes/base.pug
+
+block variables
+    - var title = "Patient Report";
+
+block append head_css
+    link(rel="stylesheet", href="css/reports.min.css")
+
+block content
+    #reports-nav.d-flex.justify-content-between
+        ul.nav.nav-tabs(role="tablist")
+            li.nav-item.reports-nav-item
+                a.nav-link.d-block.active(href="#rnt-1", role="tab")
+                    .d-flex
+                        span REQ_191991191
+                        span.border.border-danger.text-danger.rounded.report-badge Positive
+                    .report-status Interpreted
+            li.nav-item.reports-nav-item
+                a.nav-link.d-block(href="#rnt-2", role="tab")
+                    .d-flex
+                        span REQ_191991191
+                        //-span.border.border-danger.text-danger.rounded.report-badge Positive
+                    .report-status Interpreted
+            li#add-reports-tab-btn.nav-item.bg-white.border.border
+                a.nav-link(href="#")
+                    img(src="images/add-bordered.png")
+        .action-buttons.d-flex
+            a.btn.btn-warning(href="#") Interpret
+            a.btn.btn-info(href="#")
+                span Report
+                img(src="images/caret-down-white-square.png", alt="")
+            a.btn.btn-info(href="#")
+                img(src="images/report/save.png", alt="")
+            a.btn.btn-info(href="#")
+                img(src="images/report/menu.png", alt="")
+
+    .d-flex
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .personal-info .collapse") Personal Information
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .req-detail .collapse") Requisition Detail
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .preg-detail .collapse") Pregnancy Details
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .extc-fert .collapse") Extracorporeal Fertilization (IVF)
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .ultr-obs .collapse") Ultrasound Observations
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .gest-age .collapse") Gestational Age Dating inputs
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .samp-detail .collapse") Sample Details
+    #reports-tab-content.tab-content
+        #rnt-1.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="home-tab")
+            .row
+                .col-md-2
+                    aside
+                        h2.card-main-heading Summary:
+                        .card
+                            .card-body
+                                h3.card-title Patient Info:
+                                table.table
+                                    tr
+                                        th Name
+                                        td Field Flinstone
+                                    tr
+                                        th Patient ID
+                                        td 12344555555
+                                    tr
+                                        th DOB
+                                        td 05-05-05
+                                    tr
+                                        th Race
+                                        td Caucasian
+                        .card
+                            .card-body
+                                h3.card-title Marker Info:
+                                table.table
+                                    tr
+                                        th Name
+                                        th Value
+                                        th MoM
+                                    tr
+                                        td ASD
+                                        td 11
+                                        td 1.0
+                                    tr
+                                        td aksd
+                                        td 2345
+                                        td 2.33
+                                    tr
+                                        td KIok
+                                        td 0.2
+                                        td 293
+                        .card
+                            .card-body
+                                h3.card-title Risk List:
+                                .risk-item.risk-negative
+                                    span SLOSS
+                                    span Negative
+                                .risk-item.risk-negative
+                                    span SLOSS
+                                    span Negative
+                                .risk-item.risk-negative
+                                    span SLOSS
+                                    span Negative
+                                .risk-item.risk-positive
+                                    span SLOSS
+                                    span Positive
+                        .card
+                            .card-body
+                                h3.card-title Gestational Age(GA):
+                                table.table
+                                    tr
+                                        th Espected date of delovery
+                                        td 26-11-2014
+                                    tr 
+                                        th Age at EDD
+                                        td 26.6 years
+                                    tr
+                                        th GA (screening date)
+                                        td 15W + 5d
+                .col-md-10
+                    .personal-info
+                        h2.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .personal-info .collapse") Personal Information
+                        .row.collapse
+                            .col-md-6
+                                .row
+                                    .col-md-4
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                                    .col-md-4
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                                    .col-md-4
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                            .col-md-6
+                                .row
+                                    .col-md-3
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                                    .col-md-3
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                                    .col-md-3
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                                    .col-md-3
+                                        .form-group
+                                            label Patient Code
+                                            input.form-control(type="text")
+                    .req-detail
+                        h2.card-main-heading Requisition Details
+                        .row.collapse
+                            .col-md-2
+                                .form-group
+                                    label Requisition #
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Requisition #
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Requisition #
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Requisition #
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Requisition #
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Requisition #
+                                    input.form-control(type="text")
+                            .col-md-6
+                                .form-group
+                                    label Internal Note
+                                    textarea.form-control
+                            .col-md-6
+                                .form-group
+                                    label Printable Note
+                                    textarea.form-control
+                    .preg-detail
+                        h2.card-main-heading Pregnancy Details
+                        .row.collapse
+                            .col-12
+                                h4 Maternal and Pregnancy History
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-2
+                                .form-group
+                                    label Para
+                                    input.form-control(type="text")
+                            .col-md-8
+                                .form-group
+                                    label Medications
+                                    textarea.form-control
+                    .extc-fert
+                        h2.card-main-heading Extracorporeal Fertilizations (IVF)
+                        .row.collapse
+                            .col-md-4
+                                .row
+                                    .col-md-3
+                                        .form-group
+                                            label IDDM
+                                            input.form-control(type="text")
+                                    .col-md-6
+                                        div toggle
+                                    .col-md-3
+                                        .form-group
+                                            label IDDM
+                                            input.form-control(type="text")
+                            .col-md-8
+                                .col-md-3
+                                    .form-group
+                                        label IDDM
+                                        input.form-control(type="text")
+                                .col-md-3
+                                    .form-group
+                                        label IDDM
+                                        input.form-control(type="text")
+                                .col-md-3
+                                    .form-group
+                                        label IDDM
+                                        input.form-control(type="text")
+                                .col-md-3
+                                    .form-group
+                                        label IDDM
+                                        input.form-control(type="text")
+                            .col-12
+                                input(type="checkbox")
+                                label Obtained at time of harvest?
+                    .ultr-obs
+                        h2.card-main-heading Ultrasound Observations
+                        .row.collapse
+                            .col-md-2
+                            .col-md-3
+                            .col-md-2
+                            .col-md-2
+                            .col-md-2
+                            //-
+                            .col-md-2
+                            .col-md-3
+                            .col-md-2
+                            .col-md-3
+                            //-
+                            .col-md-2
+                            .col-md-3
+                            .col-md-2
+                            .col-md-3
+                            //-
+                            .col-12
+                                h4 Fetal Markers
+                            .col-md-2
+                            .col-md-5
+                                .row
+                                    .col-md-4
+                                    .col-md-4
+                                    .col-md-4
+                            .col-md-2
+                            .col-md-2
+                    .gest-age
+                        h2.card-main-heading Gestational Age Dating Inputs
+                        .row.collapse
+                            .col-md-2
+                            .col-md-2
+                            .col-md-auto
+                            .col-md-2
+                            .col-md-2
+                    .samp-detail
+                        h2.card-main-heading Sample Details
+                        .row.collapse
+                            .col-md-2
+                            .col-md-2
+                            .col-md-2
+                            .col-md-2
+                            .col-md-2
+                            .col-md-2
+                            //-
+                            .col-md-5
+                                h4 Gestational Age
+                                .card
+                                    .card-body
+                                        .d-flex.justify-content-between
+                                            h3 Physical Exam
+                                            a.btn.btn-warning(href="#") Change
+                                        p 17 week(s) 3 day(s)
+                                        p 17 week(s) 3 day(s)
+                                            span (As of Specimen Date)
+                            .col-md-7
+                                table.table
+                                    thead
+                                        tr
+                                            th Marker
+                                            th Marker
+                                            th Marker
+                                            th Marker
+                                            th Marker
+                                    tbody
+                                        tr
+                                            th MS AFP
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                        tr
+                                            th MS AFP
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                        tr
+                                            th MS AFP
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+
+        #rnt-2.tab-pane.fade(role="tabpanel")
+            //-
+
