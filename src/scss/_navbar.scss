@@ -1,4 +1,9 @@
 header#header {
+    box-shadow: $navbar-box-shadow;
+    &, nav.navbar {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
     nav.navbar {
         @extend .py-0;
         @extend .align-items-center;
