@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const auto_prefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 const browser_sync = require('browser-sync').create();
 
 
@@ -19,7 +20,10 @@ function style() {
 				title: 'SASS',
 				message: 'Error: <%= error.message %>'
 			})
-		}))
+        }))
+
+    // init sourcemap package
+        .pipe(sourcemaps.init())
 
     // pass scss files to sass compiler
         .pipe(sass({
@@ -35,6 +39,9 @@ function style() {
 
     // default behaviour for pipeline after it was piped
         .pipe(plumber.stop())
+
+    // generate sourcemap file
+        .pipe(sourcemaps.write('.'))
 
     // set compiled css file location
         .pipe(gulp.dest('./build/css'))

@@ -1,5 +1,8 @@
 @import "vendor/bootstrap/_bootstrap";
 @import "variables";
+@import "mixins";
 
+@import "default";
+@import "navbar";
 @import "table";
-
+@import "reports";
