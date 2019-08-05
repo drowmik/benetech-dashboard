@@ -4,67 +4,83 @@ block variables
     - var title = "Search Result";
 
 block content
-    #filter-options.bg-primary
-        form.position-relative(action="#")
-            .d-flex
-                .form-group
-                    label Patient Code
-                    input.form-control(type="text", name="patient-code")
-                .form-group
-                    label Second Name
-                    input.form-control(type="text", name="second-name")
-                .form-group
-                    label First Name
-                    input.form-control(type="text", name="first-name")
-                .form-group
-                    label Birth Date
-                    input.form-control(type="date", name="birth-date")
-                .form-group
-                    label Panels
-                    input.form-control(type="text", name="panels")
-                .form-group
-                    label Specimen
-                    input.form-control(type="text", name="specimen")
-                .form-group
-                    label Work Code
-                    input.form-control(type="text", name="work-code")
-                //-.form-group
-                    label Worklist
-                    input.form-control(type="text", name="worklist")
-                .form-group
-                    label Requisition Status
-                    select.form-control(name="requisition")
-                        option All
-                        option Yes
-                        option No
-            .d-flex#advanced-options
-                .form-group
-                    label Worklist
-                    input.form-control(type="text", name="worklist")
-                .form-group
-                    label Advanced Date Search
-                    select.form-control(name="advance-date-search")
-                        option Specimen Date
-                        option Yes Date
-                        option No Date
-                .form-group
-                    label Start Date (from)
-                    select.form-control(name="start-date")
-                        option 05-05-05
-                        option 05-05-06
-                        option 05-05-07
-                .form-group
-                    label End Date (to)
-                    select.form-control(name="end-date")
-                        option 05-05-05
-                        option 05-05-06
-                        option 05-05-07
+    #filter-options.bg-primary.row
+        form.col-12(action="#")
+            .position-relative
+                .row
+                    .col-md-6
+                        .row
+                            .col-md-3
+                                .form-group
+                                    label Patient Code
+                                    input.form-control.cross-on-type(type="text", name="patient-code")
+                            .col-md-3
+                                .form-group
+                                    label Second Name
+                                    input.form-control.cross-on-type(type="text", name="second-name")
+                            .col-md-3
+                                .form-group
+                                    label First Name
+                                    input.form-control.cross-on-type(type="text", name="first-name")
+                            .col-md-3
+                                .form-group
+                                    label Birth Date
+                                    input.form-control(type="date", name="birth-date")
+                    .col-md-6
+                        .row
+                            .col-md-3
+                                .form-group
+                                    label Panels
+                                    input.form-control.cross-on-type(type="text", name="panels")
+                            .col-md-3
+                                .form-group
+                                    label Specimen
+                                    input.form-control.cross-on-type(type="text", name="specimen")
+                            .col-md-3
+                                .form-group
+                                    label Work Code
+                                    input.form-control.cross-on-type(type="text", name="work-code")
+                            .col-md-3
+                                .form-group
+                                    label Requisition Status
+                                    select.form-control(name="requisition")
+                                        option All
+                                        option Yes
+                                        option No
+                    .col-md-6(style="display:none")
+                        #advanced-options
+                            .row
+                                .col-md-3
+                                    .form-group
+                                        label Worklist
+                                        input.form-control.cross-on-type(type="text", name="worklist")
+                                .col-md-3
+                                    .form-group
+                                        label Advanced Date Search
+                                        select.form-control(name="advance-date-search")
+                                            option Specimen Date
+                                            option Yes Date
+                                            option No Date
+                                .col-md-3
+                                    .form-group
+                                        label Start Date (from)
+                                        select.form-control(name="start-date")
+                                            option 05-05-05
+                                            option 05-05-06
+                                            option 05-05-07
+                                .col-md-3
+                                    .form-group
+                                        label End Date (to)
+                                        select.form-control(name="end-date")
+                                            option 05-05-05
+                                            option 05-05-06
+                                            option 05-05-07
 
-            .position-absolute.w-100.d-flex.justify-content-between
-                a.btn.btn-info.bt-btn(href="#") Show Advanced Search
-                .d-flex
-                    a.btn.btn-info.bt-btn(href="#") New Search
-                    button.btn.btn-warning.bt-btn(type="submit") Search
+                .position-absolute.w-100.d-flex.justify-content-between#filter-extra-btns
+                    a.btn.btn-info.bt-btn#filter-show-adv-search(href="#") Show Advanced Search
+                    .d-flex
+                        a.btn.btn-info.bt-btn.mr-3(href="#") New Search
+                        button.btn.btn-warning.bt-btn(type="submit") Search
 
     #search-content.px-3
         .mt-5

@@ -55,7 +55,7 @@ header#header {
                 input.form-control {
                     @mixin sfci {
                         font-family: "Open Sans", sans-serif;
-                        font-size: 14px;
+                        font-size: $body-fz;
                         line-height: 1.25;
                         color: $text-color;
                     }

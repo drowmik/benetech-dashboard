@@ -33,7 +33,7 @@ html(lang="en")
                             li.nav-item
                                 a.nav-link(href="#") Reports
                             li.nav-item.nav-cta
-                                a.nav-link.btn.btn-info.border.border-white.text-white(href="#") Add Patient
+                                a.nav-link.btn.btn-info.bt-btn.no-box-shadow(href="#") Add Patient
                         form.form-inline
                             input.form-control.mr-sm-2(type="search", placeholder="Type here...", aria-label="Search")
                             button.btn.btn-primary(type="submit")
@@ -43,37 +43,38 @@ html(lang="en")
                                 img(src="images/logout.png")
 
         block main_body
-            .container-fluid
-                .row.flex-xl-nowrap
-                    block sidebar
-                        aside.col-12.col-md-1.bt-sidebar.bg-white
-                            nav
-                                ul.list-unstyled
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/add.png")
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/find.png")
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/edit.png")
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/clipboard.png")
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/clipboard.png")
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/clipboard.png")
-                                    li
-                                        a(href="#")
-                                            img(src="images/sidebar/clipboard.png")
-
-                    main.col-md-11.pl-md-0(role="main")
-                        block content
-                            h1 Content
+            #bt-main-body
+                .container-fluid
+                    .row
+                        block sidebar
+                            aside#bt-sidebar.col.bg-white
+                                nav
+                                    ul.list-unstyled
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/add.png")
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/find.png")
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/edit.png")
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/clipboard.png")
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/clipboard.png")
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/clipboard.png")
+                                        li
+                                            a(href="#")
+                                                img(src="images/sidebar/clipboard.png")
+                        block main
+                            main#bt-main.col(role="main")
+                                block content
+                                    h1 Content
 
         block footer
             footer

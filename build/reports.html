@@ -19,7 +19,7 @@
 						<li class="nav-item"><a class="nav-link" href="#">Screening</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-						<li class="nav-item nav-cta"><a class="nav-link btn btn-info border border-white text-white" href="#">Add Patient</a></li>
+						<li class="nav-item nav-cta"><a class="nav-link btn btn-info bt-btn no-box-shadow" href="#">Add Patient</a></li>
 					</ul>
 					<form class="form-inline">
 						<input class="form-control mr-sm-2" type="search" placeholder="Type here..." aria-label="Search">
@@ -29,325 +29,353 @@
 				</div>
 			</nav>
 		</header>
-		<div class="container-fluid">
-			<div class="row flex-xl-nowrap">
-				<aside class="col-12 col-md-1 bt-sidebar bg-white">
-					<nav>
-						<ul class="list-unstyled">
-							<li><a href="#"><img src="images/sidebar/add.png"></a></li>
-							<li><a href="#"><img src="images/sidebar/find.png"></a></li>
-							<li><a href="#"><img src="images/sidebar/edit.png"></a></li>
-							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-							<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-						</ul>
-					</nav>
-				</aside>
-				<main class="col-md-11 pl-md-0" role="main">
-					<div class="d-flex justify-content-between" id="reports-nav">
-						<ul class="nav nav-tabs" role="tablist">
-							<li class="nav-item reports-nav-item"><a class="nav-link d-block active" href="#rnt-1" role="tab">
-									<div class="d-flex"><span>REQ_191991191</span><span class="border border-danger text-danger rounded report-badge">Positive</span></div>
-									<div class="report-status">Interpreted</div></a></li>
-							<li class="nav-item reports-nav-item"><a class="nav-link d-block" href="#rnt-2" role="tab">
-									<div class="d-flex"><span>REQ_191991191</span></div>
-									<div class="report-status">Interpreted</div></a></li>
-							<li class="nav-item bg-white border border" id="add-reports-tab-btn"><a class="nav-link" href="#"><img src="images/add-bordered.png"></a></li>
-						</ul>
-						<div class="action-buttons d-flex"><a class="btn btn-warning" href="#">Interpret</a><a class="btn btn-info" href="#"><span>Report</span><img src="images/caret-down-white-square.png" alt=""></a><a class="btn btn-info" href="#"><img src="images/report/save.png" alt=""></a><a class="btn btn-info" href="#"><img src="images/report/menu.png" alt=""></a></div>
-					</div>
-					<div class="d-flex">
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .personal-info .collapse">Personal Information</button>
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .req-detail .collapse">Requisition Detail</button>
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .preg-detail .collapse">Pregnancy Details</button>
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .extc-fert .collapse">Extracorporeal Fertilization (IVF)</button>
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .ultr-obs .collapse">Ultrasound Observations</button>
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .gest-age .collapse">Gestational Age Dating inputs</button>
-						<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .samp-detail .collapse">Sample Details</button>
-					</div>
-					<div class="tab-content" id="reports-tab-content">
-						<div class="tab-pane fade show active" id="rnt-1" role="tabpanel" aria-labelledby="home-tab">
-							<div class="row">
-								<div class="col-md-2">
-									<aside>
-										<h2 class="card-main-heading">Summary:</h2>
-										<div class="card">
-											<div class="card-body">
-												<h3 class="card-title">Patient Info:</h3>
-												<table class="table">
-													<tr>
-														<th>Name</th>
-														<td>Field Flinstone</td>
-													</tr>
-													<tr>
-														<th>Patient ID</th>
-														<td>12344555555</td>
-													</tr>
-													<tr>
-														<th>DOB</th>
-														<td>05-05-05</td>
-													</tr>
-													<tr>
-														<th>Race</th>
-														<td>Caucasian</td>
-													</tr>
-												</table>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<h3 class="card-title">Marker Info:</h3>
-												<table class="table">
-													<tr>
-														<th>Name</th>
-														<th>Value</th>
-														<th>MoM</th>
-													</tr>
-													<tr>
-														<td>ASD</td>
-														<td>11</td>
-														<td>1.0</td>
-													</tr>
-													<tr>
-														<td>aksd</td>
-														<td>2345</td>
-														<td>2.33</td>
-													</tr>
-													<tr>
-														<td>KIok</td>
-														<td>0.2</td>
-														<td>293</td>
-													</tr>
-												</table>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<h3 class="card-title">Risk List:</h3>
-												<div class="risk-item risk-negative"><span>SLOSS</span><span>Negative</span></div>
-												<div class="risk-item risk-negative"><span>SLOSS</span><span>Negative</span></div>
-												<div class="risk-item risk-negative"><span>SLOSS</span><span>Negative</span></div>
-												<div class="risk-item risk-positive"><span>SLOSS</span><span>Positive</span></div>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<h3 class="card-title">Gestational Age(GA):</h3>
-												<table class="table">
-													<tr>
-														<th>Espected date of delovery</th>
-														<td>26-11-2014</td>
-													</tr>
-													<tr> 
-														<th>Age at EDD</th>
-														<td>26.6 years</td>
-													</tr>
-													<tr>
-														<th>GA (screening date)</th>
-														<td>15W + 5d</td>
-													</tr>
-												</table>
-											</div>
-										</div>
-									</aside>
-								</div>
-								<div class="col-md-10">
-									<div class="personal-info">
-										<h2 class="card-main-heading" data-toggle="collapse" data-target=".tab-pane.active .personal-info .collapse">Personal Information</h2>
-										<div class="row collapse">
-											<div class="col-md-6">
-												<div class="row">
-													<div class="col-md-4">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
-													<div class="col-md-4">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
-													<div class="col-md-4">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
+		<div id="bt-main-body">
+			<div class="container-fluid">
+				<div class="row">
+					<aside class="col bg-white" id="bt-sidebar">
+						<nav>
+							<ul class="list-unstyled">
+								<li><a href="#"><img src="images/sidebar/add.png"></a></li>
+								<li><a href="#"><img src="images/sidebar/find.png"></a></li>
+								<li><a href="#"><img src="images/sidebar/edit.png"></a></li>
+								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
+							</ul>
+						</nav>
+					</aside>
+					<main class="col" id="bt-main" role="main">
+						<div class="d-flex justify-content-between" id="reports-nav">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="nav-item reports-nav-item"><a class="nav-link d-block active" href="#rnt-1" role="tab">
+										<div class="d-flex"><span>REQ_191991191</span><span class="border border-danger text-danger rounded report-badge">Positive</span></div>
+										<div class="report-status">Interpreted</div></a></li>
+								<li class="nav-item reports-nav-item"><a class="nav-link d-block" href="#rnt-2" role="tab">
+										<div class="d-flex"><span>REQ_191991191</span></div>
+										<div class="report-status">Interpreted</div></a></li>
+								<li class="nav-item bg-white border border" id="add-reports-tab-btn"><a class="nav-link" href="#"><img src="images/add-bordered.png"></a></li>
+							</ul>
+							<div class="action-buttons d-flex"><a class="btn btn-warning" href="#">Interpret</a><a class="btn btn-info" href="#"><span>Report</span><img src="images/caret-down-white-square.png" alt=""></a><a class="btn btn-info" href="#"><img src="images/report/save.png" alt=""></a><a class="btn btn-info" href="#"><img src="images/report/menu.png" alt=""></a></div>
+						</div>
+						<div class="d-flex">
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .personal-info .collapse">Personal Information</button>
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .req-detail .collapse">Requisition Detail</button>
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .preg-detail .collapse">Pregnancy Details</button>
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .extc-fert .collapse">Extracorporeal Fertilization (IVF)</button>
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .ultr-obs .collapse">Ultrasound Observations</button>
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .gest-age .collapse">Gestational Age Dating inputs</button>
+							<button class="btn btn-default" type="button" data-toggle="collapse" data-target=".tab-pane.active .samp-detail .collapse">Sample Details</button>
+						</div>
+						<div class="tab-content" id="reports-tab-content">
+							<div class="tab-pane fade show active" id="rnt-1" role="tabpanel" aria-labelledby="home-tab">
+								<div class="row">
+									<div class="col-md-2">
+										<aside>
+											<h2 class="card-main-heading">Summary:</h2>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Patient Info:</h3>
+													<table class="table">
+														<tr>
+															<th>Name</th>
+															<td>Field Flinstone</td>
+														</tr>
+														<tr>
+															<th>Patient ID</th>
+															<td>12344555555</td>
+														</tr>
+														<tr>
+															<th>DOB</th>
+															<td>05-05-05</td>
+														</tr>
+														<tr>
+															<th>Race</th>
+															<td>Caucasian</td>
+														</tr>
+													</table>
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="row">
-													<div class="col-md-3">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="form-group">
-															<label>Patient Code</label>
-															<input class="form-control" type="text">
-														</div>
-													</div>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Marker Info:</h3>
+													<table class="table">
+														<tr>
+															<th>Name</th>
+															<th>Value</th>
+															<th>MoM</th>
+														</tr>
+														<tr>
+															<td>ASD</td>
+															<td>11</td>
+															<td>1.0</td>
+														</tr>
+														<tr>
+															<td>aksd</td>
+															<td>2345</td>
+															<td>2.33</td>
+														</tr>
+														<tr>
+															<td>KIok</td>
+															<td>0.2</td>
+															<td>293</td>
+														</tr>
+													</table>
 												</div>
 											</div>
-										</div>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Risk List:</h3>
+													<div class="risk-item risk-negative"><span>SLOSS</span><span>Negative</span></div>
+													<div class="risk-item risk-negative"><span>SLOSS</span><span>Negative</span></div>
+													<div class="risk-item risk-negative"><span>SLOSS</span><span>Negative</span></div>
+													<div class="risk-item risk-positive"><span>SLOSS</span><span>Positive</span></div>
+												</div>
+											</div>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Gestational Age(GA):</h3>
+													<table class="table">
+														<tr>
+															<th>Espected date of delovery</th>
+															<td>26-11-2014</td>
+														</tr>
+														<tr> 
+															<th>Age at EDD</th>
+															<td>26.6 years</td>
+														</tr>
+														<tr>
+															<th>GA (screening date)</th>
+															<td>15W + 5d</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+										</aside>
 									</div>
-									<div class="req-detail">
-										<h2 class="card-main-heading">Requisition Details</h2>
-										<div class="row collapse">
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Requisition #</label>
-													<input class="form-control" type="text">
+									<div class="col-md-10">
+										<div class="personal-info">
+											<h2 class="card-main-heading" data-toggle="collapse" data-target=".tab-pane.active .personal-info .collapse">Personal Information</h2>
+											<div class="row collapse">
+												<div class="col-md-6">
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Requisition #</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Requisition #</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Requisition #</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Requisition #</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Requisition #</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Internal Note</label>
-													<textarea class="form-control"></textarea>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Printable Note</label>
-													<textarea class="form-control"></textarea>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="preg-detail">
-										<h2 class="card-main-heading">Pregnancy Details</h2>
-										<div class="row collapse">
-											<div class="col-12">
-												<h4>Maternal and Pregnancy History</h4>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-2">
-												<div class="form-group">
-													<label>Para</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-											<div class="col-md-8">
-												<div class="form-group">
-													<label>Medications</label>
-													<textarea class="form-control"></textarea>
+												<div class="col-md-6">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label>Patient Code</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="extc-fert">
-										<h2 class="card-main-heading">Extracorporeal Fertilizations (IVF)</h2>
-										<div class="row collapse">
-											<div class="col-md-4">
-												<div class="row">
+										<div class="req-detail">
+											<h2 class="card-main-heading">Requisition Details</h2>
+											<div class="row collapse">
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Requisition #</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Requisition #</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Requisition #</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Requisition #</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Requisition #</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Requisition #</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Internal Note</label>
+														<textarea class="form-control"></textarea>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Printable Note</label>
+														<textarea class="form-control"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="preg-detail">
+											<h2 class="card-main-heading">Pregnancy Details</h2>
+											<div class="row collapse">
+												<div class="col-12">
+													<h4>Maternal and Pregnancy History</h4>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label>Para</label>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="form-group">
+														<label>Medications</label>
+														<textarea class="form-control"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="extc-fert">
+											<h2 class="card-main-heading">Extracorporeal Fertilizations (IVF)</h2>
+											<div class="row collapse">
+												<div class="col-md-4">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="form-group">
+																<label>IDDM</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div>toggle</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label>IDDM</label>
+																<input class="form-control" type="text">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-8">
 													<div class="col-md-3">
 														<div class="form-group">
 															<label>IDDM</label>
 															<input class="form-control" type="text">
 														</div>
 													</div>
-													<div class="col-md-6">
-														<div>toggle</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>IDDM</label>
+															<input class="form-control" type="text">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>IDDM</label>
+															<input class="form-control" type="text">
+														</div>
 													</div>
 													<div class="col-md-3">
 														<div class="form-group">
@@ -356,145 +384,119 @@
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="col-md-8">
-												<div class="col-md-3">
-													<div class="form-group">
-														<label>IDDM</label>
-														<input class="form-control" type="text">
-													</div>
+												<div class="col-12">
+													<input type="checkbox">
+													<label>Obtained at time of harvest?</label>
 												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<label>IDDM</label>
-														<input class="form-control" type="text">
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<label>IDDM</label>
-														<input class="form-control" type="text">
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<label>IDDM</label>
-														<input class="form-control" type="text">
-													</div>
-												</div>
-											</div>
-											<div class="col-12">
-												<input type="checkbox">
-												<label>Obtained at time of harvest?</label>
 											</div>
 										</div>
-									</div>
-									<div class="ultr-obs">
-										<h2 class="card-main-heading">Ultrasound Observations</h2>
-										<div class="row collapse">
-											<div class="col-md-2"></div>
-											<div class="col-md-3"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-3"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-3"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-3"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-3"></div>
-											<div class="col-12">
-												<h4>Fetal Markers</h4>
-											</div>
-											<div class="col-md-2"></div>
-											<div class="col-md-5">
-												<div class="row">
-													<div class="col-md-4"></div>
-													<div class="col-md-4"></div>
-													<div class="col-md-4"></div>
+										<div class="ultr-obs">
+											<h2 class="card-main-heading">Ultrasound Observations</h2>
+											<div class="row collapse">
+												<div class="col-md-2"></div>
+												<div class="col-md-3"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-3"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-3"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-3"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-3"></div>
+												<div class="col-12">
+													<h4>Fetal Markers</h4>
 												</div>
+												<div class="col-md-2"></div>
+												<div class="col-md-5">
+													<div class="row">
+														<div class="col-md-4"></div>
+														<div class="col-md-4"></div>
+														<div class="col-md-4"></div>
+													</div>
+												</div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
 											</div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
 										</div>
-									</div>
-									<div class="gest-age">
-										<h2 class="card-main-heading">Gestational Age Dating Inputs</h2>
-										<div class="row collapse">
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-auto"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
+										<div class="gest-age">
+											<h2 class="card-main-heading">Gestational Age Dating Inputs</h2>
+											<div class="row collapse">
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-auto"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+											</div>
 										</div>
-									</div>
-									<div class="samp-detail">
-										<h2 class="card-main-heading">Sample Details</h2>
-										<div class="row collapse">
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-2"></div>
-											<div class="col-md-5">
-												<h4>Gestational Age</h4>
-												<div class="card">
-													<div class="card-body">
-														<div class="d-flex justify-content-between">
-															<h3>Physical Exam</h3><a class="btn btn-warning" href="#">Change</a>
+										<div class="samp-detail">
+											<h2 class="card-main-heading">Sample Details</h2>
+											<div class="row collapse">
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-5">
+													<h4>Gestational Age</h4>
+													<div class="card">
+														<div class="card-body">
+															<div class="d-flex justify-content-between">
+																<h3>Physical Exam</h3><a class="btn btn-warning" href="#">Change</a>
+															</div>
+															<p>17 week(s) 3 day(s)</p>
+															<p>17 week(s) 3 day(s)<span>(As of Specimen Date)</span></p>
 														</div>
-														<p>17 week(s) 3 day(s)</p>
-														<p>17 week(s) 3 day(s)<span>(As of Specimen Date)</span></p>
 													</div>
 												</div>
-											</div>
-											<div class="col-md-7">
-												<table class="table">
-													<thead>
-														<tr>
-															<th>Marker</th>
-															<th>Marker</th>
-															<th>Marker</th>
-															<th>Marker</th>
-															<th>Marker</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<th>MS AFP</th>
-															<td>100</td>
-															<td>100</td>
-															<td>100</td>
-															<td>100</td>
-														</tr>
-														<tr>
-															<th>MS AFP</th>
-															<td>100</td>
-															<td>100</td>
-															<td>100</td>
-															<td>100</td>
-														</tr>
-														<tr>
-															<th>MS AFP</th>
-															<td>100</td>
-															<td>100</td>
-															<td>100</td>
-															<td>100</td>
-														</tr>
-													</tbody>
-												</table>
+												<div class="col-md-7">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>Marker</th>
+																<th>Marker</th>
+																<th>Marker</th>
+																<th>Marker</th>
+																<th>Marker</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th>MS AFP</th>
+																<td>100</td>
+																<td>100</td>
+																<td>100</td>
+																<td>100</td>
+															</tr>
+															<tr>
+																<th>MS AFP</th>
+																<td>100</td>
+																<td>100</td>
+																<td>100</td>
+																<td>100</td>
+															</tr>
+															<tr>
+																<th>MS AFP</th>
+																<td>100</td>
+																<td>100</td>
+																<td>100</td>
+																<td>100</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="tab-pane fade" id="rnt-2" role="tabpanel"></div>
 						</div>
-						<div class="tab-pane fade" id="rnt-2" role="tabpanel"></div>
-					</div>
-				</main>
+					</main>
+				</div>
 			</div>
 		</div>
 		<footer></footer>

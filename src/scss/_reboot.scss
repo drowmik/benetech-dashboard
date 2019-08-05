@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/aller.ttf');
+}
+
+body {
+    font-family: "Aller", Roboto, sans-serif;
+    letter-spacing: 0.06em;
+    font-size: $body-fz;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.lh-1 {
+    line-height: 1 !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bt-btn {
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #fff !important;
+    outline: none;
+    box-shadow: 0 4px 4px rgba(65, 97, 132, 0.25);
+}
+
+.no-box-shadow {
+    box-shadow: none !important;
+}

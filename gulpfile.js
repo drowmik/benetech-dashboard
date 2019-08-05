@@ -80,7 +80,7 @@ function watch() {
     // watch for these file changes
     gulp.watch('./src/scss/**/*.scss', style);
     gulp.watch('./src/pug/**/*.pug', template);
-    gulp.watch('./build/*.js').on('change', browser_sync.reload);
+    gulp.watch('./build/js/*.js').on('change', browser_sync.reload);
 }
 
 function build_style() {

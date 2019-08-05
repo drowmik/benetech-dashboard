@@ -1,0 +1,51 @@
+#filter-options {
+    $filter-div-fare: 25px;
+    padding: $filter-div-fare 0;
+    form {
+        $row-col-fare: 4px;
+        .row {
+            margin-left: -$row-col-fare;
+            margin-right: -$row-col-fare;
+        }
+        [class^=col-] {
+            @include padding-x($row-col-fare !important)
+        }
+        .col-md-3{
+            @extend .d-flex;
+            @extend .align-items-end;
+            .form-group {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+        
+        .form-group{
+            label {
+                @extend .open-sans;
+                color: $white;
+                font-weight: bold;
+                padding-left: 5 px;
+            }
+            &.cross-show {
+                position: relative;
+                span {
+                    $sz: 14px;
+                    background-image: url('../images/cross-green.png');
+                    background-size: $sz $sz;
+                    width: $sz;
+                    height: $sz;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 12px;
+                }
+            }
+        }
+        #filter-extra-btns {
+            padding-left: calc(50px - 15px);
+            bottom: -#{$filter-div-fare + 25px};
+        }
+    }
+}
+
+#advanced-options {
+}
