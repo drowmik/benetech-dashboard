@@ -1,4 +1,28 @@
 extends includes/base.pug
 
 block variables
-    - var title = "Dashboard";
+    - var title = "Login";
+
+block head_css
+    link(rel="stylesheet", href="css/login.min.css")
+
+
+block main_menu
+block main_body
+    #bt-main-body
+        .container-fluid
+            .row
+                .col-md-6#login-bg
+                .col-md-6
+                    #login-form.d-flex.justify-content-center.align-items-center
+                        form(action="dashboard.html", method="post")
+                            h1 Log in
+                            .form-group
+                                label Username
+                                input.form-control(type='text' placeholder='Enter your login', required)
+                            .form-group
+                                label Password
+                                input.form-control(type='password' placeholder='Enter your password', required)
+                            .form-group.d-flex.justify-content-between.align-items-center
+                                a.btn-link(href="#") Forgot Password?
+                                button.btn.btn-warning.bt-btn Log in

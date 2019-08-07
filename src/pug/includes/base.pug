@@ -26,29 +26,31 @@ html(lang="en")
         block header
             header#header
                 nav.navbar.navbar-expand-lg.navbar-dark
-                    a.navbar-brand(href="#")
-                        img(src="images/logo.png")
-                    button.navbar-toggler(type="button", data-toggle="collapse", data-target="#main-menu-top", aria-controls="main-menu-top", aria-label="Toggle navigation")
-                        span.navbar-toggler-icon
-                    #main-menu-top.collapse.navbar-collapse
-                        ul.navbar-nav.mr-auto
-                            li.nav-item.active
-                                a.nav-link(href="#") Patient
-                            li.nav-item
-                                a.nav-link(href="#") Screening
-                            li.nav-item
-                                a.nav-link(href="#") Tools
-                            li.nav-item
-                                a.nav-link(href="#") Reports
-                            li.nav-item.nav-cta
-                                a.nav-link.btn.btn-info.bt-btn.no-box-shadow(href="#") Add Patient
-                        form.form-inline
-                            input.form-control.mr-sm-2(type="search", placeholder="Type here...", aria-label="Search")
-                            button.btn.btn-primary(type="submit")
-                                img(src="images/search.png")
-                        .top-nav-logout
-                            a(href="#")
-                                img(src="images/logout.png")
+                    block logo
+                        a.navbar-brand(href="/")
+                            img(src="images/logo.png")
+                    block main_menu
+                        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#main-menu-top", aria-controls="main-menu-top", aria-label="Toggle navigation")
+                            span.navbar-toggler-icon
+                        #main-menu-top.collapse.navbar-collapse
+                            ul.navbar-nav.mr-auto
+                                li.nav-item.active
+                                    a.nav-link(href="#") Patient
+                                li.nav-item
+                                    a.nav-link(href="#") Screening
+                                li.nav-item
+                                    a.nav-link(href="#") Tools
+                                li.nav-item
+                                    a.nav-link(href="#") Reports
+                                li.nav-item.nav-cta
+                                    a.nav-link.btn.btn-info.bt-btn.no-box-shadow(href="#") Add Patient
+                            form.form-inline
+                                input.form-control.mr-sm-2(type="search", placeholder="Type here...", aria-label="Search")
+                                button.btn.btn-primary(type="submit")
+                                    img(src="images/search.png")
+                            .top-nav-logout
+                                a(href="#")
+                                    img(src="images/logout.png")
 
         block main_body
             #bt-main-body

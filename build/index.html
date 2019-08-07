@@ -4,55 +4,41 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Benetech | Dashboard</title>
+		<title>Benetech | Login</title>
 		<link rel="icon" size="128x128" type="image/png" href="images/favicon.png">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/styles.min.css">
-		<link rel="stylesheet" href="css/jquery-ui.min.css">
-		<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+		<link rel="stylesheet" href="css/login.min.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/jquery-ui-init.js"></script>
 	</head>
 	<body>
 		<header id="header">
-			<nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar-brand" href="#"><img src="images/logo.png"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu-top" aria-controls="main-menu-top" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse" id="main-menu-top">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active"><a class="nav-link" href="#">Patient</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Screening</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-						<li class="nav-item nav-cta"><a class="nav-link btn btn-info bt-btn no-box-shadow" href="#">Add Patient</a></li>
-					</ul>
-					<form class="form-inline">
-						<input class="form-control mr-sm-2" type="search" placeholder="Type here..." aria-label="Search">
-						<button class="btn btn-primary" type="submit"><img src="images/search.png"></button>
-					</form>
-					<div class="top-nav-logout"><a href="#"><img src="images/logout.png"></a></div>
-				</div>
+			<nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar-brand" href="/"><img src="images/logo.png"></a>
 			</nav>
 		</header>
 		<div id="bt-main-body">
 			<div class="container-fluid">
 				<div class="row">
-					<aside class="col bg-white" id="bt-sidebar">
-						<nav>
-							<ul class="list-unstyled">
-								<li><a href="#"><img src="images/sidebar/add.png"></a></li>
-								<li><a href="#"><img src="images/sidebar/find.png"></a></li>
-								<li><a href="#"><img src="images/sidebar/edit.png"></a></li>
-								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-								<li><a href="#"><img src="images/sidebar/clipboard.png"></a></li>
-							</ul>
-						</nav>
-					</aside>
-					<main class="col" id="bt-main" role="main">
-						<h1>Content</h1>
-					</main>
+					<div class="col-md-6" id="login-bg"></div>
+					<div class="col-md-6">
+						<div class="d-flex justify-content-center align-items-center" id="login-form">
+							<form action="dashboard.html" method="post">
+								<h1>Log in</h1>
+								<div class="form-group">
+									<label>Username</label>
+									<input class="form-control" type="text" placeholder="Enter your login" required>
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input class="form-control" type="password" placeholder="Enter your password" required>
+								</div>
+								<div class="form-group d-flex justify-content-between align-items-center"><a class="btn-link" href="#">Forgot Password?</a>
+									<button class="btn btn-warning bt-btn">Log in</button>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

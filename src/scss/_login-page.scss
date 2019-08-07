@@ -1,0 +1,39 @@
+#bt-main-body {
+    #login-bg {
+        background: url('../images/login-bg-1.jpg') no-repeat left center;
+        background-size: cover;
+    }
+    #login-form {
+        min-height: calc(100vh - #{$navbar-mx-height});
+        color: $text-color-2 !important;
+        h1 {
+            @extend .open-sans;
+            font-size: 48px;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+        form {
+            $padding: 30px;
+            width: 620px + $padding*2;
+            max-width: 100%;
+            padding: $padding;
+            label {
+                @extend .open-sans;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .form-group {
+                margin-bottom: 24px;
+                .form-control {
+                    height: 50px;
+                    font-size: 18px;
+                    border-color: $login-input-border;
+                }
+            }
+            .btn-link {
+                color: $login-link-color;
+            }
+        }
+    }
+}
