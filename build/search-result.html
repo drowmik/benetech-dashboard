@@ -6,8 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Benetech | Search Result</title>
 		<link rel="icon" size="128x128" type="image/png" href="images/favicon.png">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/styles.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery-ui-init.js"></script>
 	</head>
 	<body>
 		<header id="header">
@@ -73,7 +78,7 @@
 												<div class="col-md-3">
 													<div class="form-group">
 														<label>Birth Date</label>
-														<input class="form-control" type="date" name="birth-date">
+														<input class="form-control jqui-datepicker" type="text" name="birth-date" autocomplete="off">
 													</div>
 												</div>
 											</div>
@@ -161,8 +166,8 @@
 								</div>
 							</form>
 						</div>
-						<div class="px-3" id="search-content">
-							<div class="mt-5">
+						<div class="px-3 mb-5" id="search-content">
+							<div class="mt-5 heading">
 								<h2 class="d-inline-block">Search Patient:</h2><span>333 333 results</span>
 							</div>
 							<div id="search-table-wrapper">
@@ -339,19 +344,25 @@
 											<td>WC_3333</td>
 											<td>19819389-MO-1</td>
 										</tr>
+										<tr>
+											<td colspan="11">
+												<div class="d-flex justify-content-end" id="search-pagination">
+													<nav aria-label="Pagination">
+														<ul class="pagination">
+															<li class="page-item disabled"><a class="page-link" href="#"><span class="sr-only">prev</span></a></li>
+															<li class="page-item active"><span class="page-link">1</span></li>
+															<li class="page-item"><a class="page-link" href="#">2</a></li>
+															<li class="page-item"><a class="page-link" href="#">3</a></li>
+															<li class="page-item"><span class="page-link">...</span></li>
+															<li class="page-item"><a class="page-link" href="#">23</a></li>
+															<li class="page-item"><a class="page-link" href="#"><span class="sr-only">next</span></a></li>
+														</ul>
+													</nav>
+												</div>
+											</td>
+										</tr>
 									</tbody>
 								</table>
-								<nav aria-label="Pagination">
-									<ul class="pagination">
-										<li class="page-item disabled"><a class="page-link" href="#"><img src="images/caret-left.png"></a></li>
-										<li class="page-item"><a class="page-link" href="#">1</a></li>
-										<li class="page-item active"><span class="page-link">2</span></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item"><span class="page-link">...</span></li>
-										<li class="page-item"><a class="page-link" href="#">23</a></li>
-										<li class="page-item"><a class="page-link" href="#"><img src="images/caret-right.png"></a></li>
-									</ul>
-								</nav>
 							</div>
 						</div>
 					</main>
@@ -359,7 +370,6 @@
 			</div>
 		</div>
 		<footer></footer>
-		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>

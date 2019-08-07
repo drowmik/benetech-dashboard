@@ -34,3 +34,34 @@ img {
 .no-box-shadow {
     box-shadow: none !important;
 }
+
+
+// border radius
+.rounded-TL {
+    border-top-left-radius: $border-radius;
+}
+.rounded-TR {
+    border-top-right-radius: $border-radius;
+}
+.rounded-BL {
+    border-bottom-left-radius: $border-radius;
+}
+.rounded-BR {
+    border-bottom-right-radius: $border-radius;
+}
+.rounded-T { // top only
+    @extend .rounded-TL;
+    @extend .rounded-TR;
+}
+.rounded-R { // right only
+    @extend .rounded-TR;
+    @extend .rounded-BR;
+}
+.rounded-B { // bottom only
+    @extend .rounded-BL;
+    @extend .rounded-BR;
+}
+.rounded-L { // left only
+    @extend .rounded-TL;
+    @extend .rounded-BL;
+}

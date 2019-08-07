@@ -1,6 +1,7 @@
 #filter-options {
     $filter-div-fare: 25px;
     padding: $filter-div-fare 0;
+    @extend .rounded-B;
     form {
         $row-col-fare: 4px;
         .row {
@@ -47,5 +48,99 @@
     }
 }
 
-#advanced-options {
+#search-content {
+    .heading{
+        h2, span {
+            font-family: 'Open Sans';
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+        h2 {
+            font-size: 48px;
+            margin-right: 25px;
+            margin-bottom: 30px;
+            color: $text-color-2;
+        }
+        span {
+            font-size: 36px;
+            color: $text-color-3;
+        }
+    }
+
+    #search-table-wrapper {
+        table.table {
+            color: $text-color-2;
+            @extend .open-sans;
+            thead {
+                &>tr{
+                    &>th {
+                        border-bottom: 0;
+                    }
+                    &>th:first-child {
+                        @extend .rounded-L;
+                    }
+                    &>th:last-child {
+                        @extend .rounded-R;
+                    }
+                    &>th:not(:last-child) {
+                        border-right: 1px solid #fff;
+                    }
+                }
+            }
+            tbody > tr:last-child > td {
+                padding: 8px;
+                #search-pagination {
+                    $pagination-sz: 40px;
+                    $pagination-border-radius: 4px;
+                    .pagination {
+                        margin-bottom: 0;
+                        li.page-item {
+                            &>.page-link {
+                                height: $pagination-sz;
+                                width: $pagination-sz;
+                                color: $text-color-2;
+                                font-weight: light;
+                                padding-top: 10px;
+                                margin-left: 0;
+                                border-color: $pagination-border;
+                                background-repeat: no-repeat;
+                                background-size: 12px 22px;
+                                background-position: center center;
+                            }
+                            &.active {
+                                .page-link {
+                                    background-color: $bg-color-2;
+                                    font-weight: bold;
+                                }
+                            }
+                            &:first-child {
+                                .page-link{
+                                    border-top-left-radius: $pagination-border-radius;
+                                    border-bottom-left-radius: $pagination-border-radius;
+                                    background-image: url('../images/caret-left.png');
+                                }
+                            }
+                            &.disabled:first-child{
+                                .page-link {
+                                    background-image: url('../images/caret-left-white.png');
+                                }
+                            }
+                            &:last-child {
+                                .page-link{
+                                    border-top-right-radius: $pagination-border-radius;
+                                    border-bottom-right-radius: $pagination-border-radius;
+                                    background-image: url('../images/caret-right.png');
+                                }
+                            }
+                            &.disabled:last-child{
+                                .page-link {
+                                    background-image: url('../images/caret-right-white.png');
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

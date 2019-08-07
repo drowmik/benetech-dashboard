@@ -10,10 +10,18 @@ html(lang="en")
         title Benetech | #{title}
 
         link(rel="icon", size="128x128", type="image/png" href="images/favicon.png")
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap', rel='stylesheet')
 
         block head_css
             link(rel="stylesheet", href="css/styles.min.css")
+            link(rel="stylesheet", href="css/jquery-ui.min.css")
+            link(rel="stylesheet", href="css/jquery-ui.theme.min.css")
+        
+        block head_js
+            script(src="js/jquery-3.3.1.min.js")
+            script(src="js/jquery-ui.min.js")
+            script(src="js/jquery-ui-init.js")
+
     body
         block header
             header#header
@@ -80,7 +88,6 @@ html(lang="en")
             footer
 
         block bottom_js
-            script(src="js/jquery-3.3.1.min.js")
             script(src="js/popper.min.js")
             script(src="js/bootstrap.min.js")
             script(src="js/scripts.js")
