@@ -59,7 +59,7 @@
 								<li class="nav-item reports-nav-item"><a class="nav-link d-block active" href="#rnt-2" role="tab">
 										<div class="d-flex"><span class="report-number">REQ_191991191</span></div>
 										<div class="report-status report-pending">Pending</div></a></li>
-								<li class="nav-item reports-nav-item" id="add-reports-tab-btn"><a class="nav-link bg-white border" href="#"><img src="images/add-bordered.png"></a></li>
+								<li class="reports-nav-item" id="add-reports-tab-btn"><a class="bg-white border" href="#"><img src="images/add-bordered.png"></a></li>
 							</ul>
 							<div class="action-buttons d-flex align-items-center">
 								<div class="each-action-btn"><a class="btn btn-warning bt-btn" href="#">Interpret</a></div>
@@ -78,7 +78,7 @@
 							<button class="btn btn-default collapsed" type="button" data-toggle="collapse" data-target=".tab-pane.active .samp-detail .tobecollapse">Sample Details</button>
 						</div>
 						<div class="tab-content" id="reports-tab-content">
-							<div class="tab-pane fade show active" id="rnt-2" role="tabpanel" aria-labelledby="home-tab">
+							<div class="tab-pane fade" id="rnt-1" role="tabpanel">
 								<div class="row">
 									<div class="col-md-2 report-aside-column">
 										<aside class="bg-white">
@@ -807,7 +807,735 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="rnt-1" role="tabpanel"></div>
+							<div class="tab-pane fade show active" id="rnt-2" role="tabpanel">
+								<div class="row">
+									<div class="col-md-2 report-aside-column">
+										<aside class="bg-white">
+											<h2 class="bg-primary rounded card-main-heading">Summary:</h2>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Patient Info:</h3>
+													<table class="table table-bordered">
+														<tr>
+															<th>Name</th>
+															<td>Field Flinstone</td>
+														</tr>
+														<tr>
+															<th>Patient ID</th>
+															<td>12344555555</td>
+														</tr>
+														<tr>
+															<th>DOB</th>
+															<td>05-05-05</td>
+														</tr>
+														<tr>
+															<th>Race</th>
+															<td>Caucasian</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Marker Info:</h3>
+													<table class="table table-bordered">
+														<tr>
+															<th>Name</th>
+															<th>Value</th>
+															<th>MoM</th>
+														</tr>
+														<tr>
+															<td>ASD</td>
+															<td>11</td>
+															<td>1.0</td>
+														</tr>
+														<tr>
+															<td>aksd</td>
+															<td>2345</td>
+															<td>2.33</td>
+														</tr>
+														<tr>
+															<td>KIok</td>
+															<td>0.2</td>
+															<td>293</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Risk List:</h3>
+													<div class="bt-pill-item bt-pill-negative"><span>SLOSS</span><span>Negative</span></div>
+													<div class="bt-pill-item bt-pill-negative"><span>SLOSS</span><span>Negative</span></div>
+													<div class="bt-pill-item bt-pill-negative"><span>SLOSS</span><span>Negative</span></div>
+													<div class="bt-pill-item bt-pill-positive"><span>SLOSS</span><span>Positive</span></div>
+												</div>
+											</div>
+											<div class="card">
+												<div class="card-body">
+													<h3 class="card-title">Gestational Age(GA):</h3>
+													<table class="table table-bordered">
+														<tr>
+															<th>Espected date of delovery</th>
+															<td>26-11-2014</td>
+														</tr>
+														<tr> 
+															<th>Age at EDD</th>
+															<td>26.6 years</td>
+														</tr>
+														<tr>
+															<th>GA (screening date)</th>
+															<td>15W + 5d</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+										</aside>
+									</div>
+									<div class="col-md-10 report-main-column">
+										<div class="personal-info each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .personal-info .tobecollapse">Personal Information</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>Patient Code</label>
+																	<input class="form-control cross-on-type" type="text" name="patient-code">
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>Last Name</label>
+																	<input class="form-control cross-on-type" type="text" name="last-name">
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>First Name</label>
+																	<input class="form-control cross-on-type" type="text" name="first-name">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Birth Date</label>
+																	<input class="form-control jqui-datepicker" type="text" name="birth-date">
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Race</label>
+																	<select class="form-control" name="race">
+																		<option>Caucasian</option>
+																		<option>Asian</option>
+																		<option>African</option>
+																	</select>
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>User Defined</label>
+																	<input class="form-control cross-on-type" type="text" name="user-defined">
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Medicare</label>
+																	<input class="form-control cross-on-type" type="text" name="medicare">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>Phone number</label>
+																	<input class="form-control phn-mask" type="text" name="phone" placeholder="(____) __________">
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>Country</label>
+																	<input class="form-control cross-on-type" type="text" name="country">
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>City</label>
+																	<input class="form-control cross-on-type" type="text" name="city">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>State</label>
+																	<select class="form-control" name="state">
+																		<option>Alaska</option>
+																		<option>Florida</option>
+																	</select>
+																</div>
+															</div>
+															<div class="col-md-5">
+																<div class="form-group">
+																	<label>Address_1</label>
+																	<div class="add-icon-right">
+																		<input class="form-control" type="text" name="addr-1">
+																		<div class="add-icon"><img src="images/add.png"></div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-2">
+																<div class="form-group">
+																	<label>Postal Code</label>
+																	<input class="form-control cross-on-type" type="text" name="post-code">
+																</div>
+															</div>
+															<div class="col-md-2">
+																<div class="form-group">
+																	<label>SIN</label>
+																	<input class="form-control cross-on-type" type="text" name="sin">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="req-detail each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .req-detail .tobecollapse">Requisition Details</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Requisition #</label>
+															<input class="form-control cross-on-type" type="text" name="requisition">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>LMP Date</label>
+															<input class="form-control jqui-datepicker" type="text" name="lmp-date">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Lab Work Code</label>
+															<input class="form-control cross-on-type" type="text" name="lab-work-code">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Doctor_1</label>
+															<div class="add-icon-right">
+																<input class="form-control" type="text" name="doctor-1">
+																<div class="add-icon"><img src="images/add.png"></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Panel</label>
+															<select class="form-control" type="text" name="panel">
+																<option>MS AFP</option>
+																<option>GS AFP</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Status</label>
+															<select class="form-control cross-on-type" type="text">
+																<option>Initual Sample</option>
+																<option>Sample</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label>Internal Note</label>
+															<textarea class="form-control"></textarea>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label>Printable Note</label>
+															<textarea class="form-control"></textarea>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="preg-detail each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .preg-detail .tobecollapse">Pregnancy Details</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-12">
+														<h4>Maternal and Pregnancy History</h4>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Para</label>
+															<input class="form-control cross-on-type" type="text" name="para">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Gravida</label>
+															<input class="form-control cross-on-type" type="text" name="gravida">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Multiple</label>
+															<select class="form-control" type="text" name="multiple">
+																<option>Singleton</option>
+																<option>Singleton2</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>IDDM</label>
+															<select class="form-control" type="text" name="iddm">
+																<option>Yes</option>
+																<option>No</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Smoker</label>
+															<select class="form-control" type="text" name="smoker">
+																<option>Yes</option>
+																<option>No</option>
+																<option>Unknown</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>VPA</label>
+															<select class="form-control" type="text" name="vpa">
+																<option>Yes</option>
+																<option>No</option>
+																<option>Unknown</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>SSRI</label>
+															<select class="form-control" type="text" name="ssri">
+																<option>Yes</option>
+																<option>No</option>
+																<option>Unknown</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>CBZ</label>
+															<select class="form-control" type="text" name="cbz">
+																<option>Yes</option>
+																<option>No</option>
+																<option>Unknown</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>DS HIST</label>
+															<select class="form-control" type="text" name="ds-hist">
+																<option>Yes</option>
+																<option>No</option>
+																<option>Unknown</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>OSB HIST</label>
+															<select class="form-control" type="text" name="dsb-hist">
+																<option>Yes</option>
+																<option>No</option>
+																<option>Unknown</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-8">
+														<div class="form-group">
+															<label>Medications</label>
+															<textarea class="form-control"></textarea>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="extc-fert each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .extc-fert .tobecollapse">Extracorporeal Fertilizations (IVF)</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-md-4">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>IDDM</label>
+																	<select class="form-control" type="text" name="iddm">
+																		<option>Yes</option>
+																		<option>No</option>
+																		<option>Unknown</option>
+																	</select>
+																</div>
+															</div>
+															<div class="col-md-6 d-flex justify-content-center flex-column">
+																<div class="input-checkbox-toggle" style="--dataLeft:'Donor DOB';--dataRight:'Age'">
+																	<input type="checkbox">
+																	<label></label>
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Age</label>
+																	<input class="form-control" type="number" name="age">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-8">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Harvest Date</label>
+																	<input class="form-control" type="text" disabled value="05-30-88">
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Fertilization Date</label>
+																	<input class="form-control" type="text" disabled value="05-30-88">
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Days in Vitro</label>
+																	<input class="form-control" type="text" disabled value="05-30-88">
+																</div>
+															</div>
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label>Transfer Date</label>
+																	<input class="form-control" type="text" disabled value="05-30-88">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12">
+														<div class="custom-control custom-checkbox">
+															<input class="custom-control-input" id="form-obtain-time-harvest" type="checkbox">
+															<label class="custom-control-label" for="form-obtain-time-harvest">Obtained at time of harvest?</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="ultr-obs each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .ultr-obs .tobecollapse">Ultrasound Observations</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>U/S Date (GA)</label>
+															<input class="form-control cross-on-type" type="text" name="us-date-ga">
+														</div>
+													</div>
+													<div class="col-md-4 d-flex flex-column justify-content-center count-box">
+														<div class="d-flex align-items-center justify-content-center"><span class="text-right pr-2">Gestitation Age:</span>
+															<div class="d-flex align-items-center">
+																<input class="form-control" type="number" name="gest-age-1" value="0"><span class="px-1">+</span>
+																<input class="form-control" type="number" name="gest-age-2" value="0">
+															</div>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Sonographer</label>
+															<select class="form-control" name="sonographer" disabled>
+																<option>000 (Not Specified)</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Location</label>
+															<select class="form-control" name="location" disabled>
+																<option>0</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Supervisor</label>
+															<select class="form-control" name="supervisor" disabled></select>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>CRL</label>
+															<select class="form-control" name="crl" disabled>
+																<option>0,0</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-4 d-flex flex-column justify-content-center count-box">
+														<div class="d-flex align-items-center justify-content-center"><span class="text-right pr-2">(2-100 mm)</span>
+															<div class="d-flex align-items-center">
+																<input class="form-control" type="number" name="2-100mm-1" value="0"><span class="px-1">+</span>
+																<input class="form-control" type="number" name="2-100mm-2" value="0">
+															</div>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label>HC</label>
+														<input class="form-control" type="text" name="hc" value="0,0" disabled>
+													</div>
+													<div class="col-md-4 d-flex flex-column justify-content-center count-box">
+														<div class="d-flex align-items-center justify-content-center"><span class="text-right pr-2">(100-200 mm)</span>
+															<div class="d-flex align-items-center">
+																<input class="form-control" type="number" name="100-200mm-1" value="0"><span class="px-1">+</span>
+																<input class="form-control" type="number" name="100-200mm-2" value="0">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>BPD</label>
+															<select class="form-control" name="bpd" disabled>
+																<option>0,0</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-4 d-flex flex-column justify-content-center count-box">
+														<div class="d-flex align-items-center justify-content-center"><span class="text-right pr-2">(15-72 mm)</span>
+															<div class="d-flex align-items-center">
+																<input class="form-control" type="number" name="15-72mm-1" value="0"><span class="px-1">+</span>
+																<input class="form-control" type="number" name="15-72mm-2" value="0">
+															</div>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label>FL</label>
+														<input class="form-control" type="text" name="fl" value="0,0" disabled>
+													</div>
+													<div class="col-md-4 d-flex flex-column justify-content-center count-box">
+														<div class="d-flex align-items-center justify-content-center"><span class="text-right pr-2">(2-48 mm)</span>
+															<div class="d-flex align-items-center">
+																<input class="form-control" type="number" name="2-48mm-1" value="0"><span class="px-1">+</span>
+																<input class="form-control" type="number" name="2-48mm-2" value="0">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12">
+														<h4>Fetal Markers</h4>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Measured on</label>
+															<input class="form-control" type="text" name="measured-on" disabled>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-4 d-flex flex-column justify-content-center">
+																<div class="custom-control custom-checkbox">
+																	<input class="custom-control-input" id="form-use-ultrasound-date" type="checkbox">
+																	<label class="custom-control-label" for="form-use-ultrasound-date">Use Ultrasound Date</label>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>NT (mm)</label>
+																	<input class="form-control" type="text" name="nt-mm" value="0.00" disabled>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label>DPVI</label>
+																	<input class="form-control" type="text" name="dpvi" value="0.0" disabled>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Nasal Bone</label>
+															<select class="form-control" name="nasal-bone">
+																<option>Unknown</option>
+																<option>Yes</option>
+																<option>No</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Black</label>
+															<select class="form-control" name="black">
+																<option>Unknown</option>
+																<option>Yes</option>
+																<option>No</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="gest-age each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .gest-age .tobecollapse">Gestational Age Dating Inputs</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>LMP Date</label>
+															<input class="form-control jqui-datepicker cross-on-type" type="text" name="lmp-date">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>EDD</label>
+															<input class="form-control jqui-datepicker cross-on-type" type="text" name="edd">
+														</div>
+													</div>
+													<div class="col-md-2 d-flex flex-column justify-content-center">
+														<div class="custom-control custom-checkbox">
+															<input class="custom-control-input" id="form-determined-by-us" type="checkbox">
+															<label class="custom-control-label" for="form-determined-by-us">Determined by US</label>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Exam Date</label>
+															<input class="form-control jqui-datepicker cross-on-type" type="text" name="exam-date">
+														</div>
+													</div>
+													<div class="col-md-4 d-flex flex-column justify-content-center count-box">
+														<div class="d-flex align-items-center">
+															<input class="form-control" type="number" name="gest-age-1" value="0"><span class="px-1">+</span>
+															<input class="form-control" type="number" name="gest-age-2" value="0">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="samp-detail each-report-details">
+											<h2 class="bg-primary rounded card-main-heading collapsed" data-toggle="collapse" data-target=".tab-pane.active .samp-detail .tobecollapse">Sample Details</h2>
+											<div class="collapse tobecollapse">
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Received Date</label>
+															<input class="form-control jqui-datepicker cross-on-type" type="text" name="rec-dt">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Specimen Date</label>
+															<input class="form-control jqui-datepicker cross-on-type" type="text" name="spc-dt">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Weight</label>
+															<input class="form-control cross-on-type" type="text" name="weight">
+														</div>
+													</div>
+													<div class="col-md-2 d-flex justify-content-center flex-column">
+														<div class="input-checkbox-toggle" style="--dataLeft:'Killogram';--dataRight:'Pound'">
+															<input type="checkbox">
+															<label></label>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>By Reffering Lab</label>
+															<input class="form-control cross-on-type" type="text" name="reff-lab">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>By Assating Lab</label>
+															<input class="form-control cross-on-type" type="text" name="ass-lab">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-5 bt-card-view">
+														<h4>Gestational Age</h4>
+														<div class="card">
+															<div class="card-body">
+																<div class="d-flex justify-content-between">
+																	<h3>Physical Exam</h3><a class="btn btn-warning bt-btn" href="#">Change</a>
+																</div>
+																<p class="font-weight-bold mb-0">17 week(s) 3 day(s)</p>
+																<p class="font-weight-bold">17 week(s) 3 day(s)<span class="font-weight-normal pl-2">(As of Specimen Date)</span></p>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-7">
+														<table class="table table-bordered">
+															<thead>
+																<tr>
+																	<th>Marker</th>
+																	<th>Result</th>
+																	<th>Unit</th>
+																	<th>Assay Date</th>
+																	<th>MoM</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<th>MS AFP</th>
+																	<td>100</td>
+																	<td>100</td>
+																	<td>100</td>
+																	<td>100</td>
+																</tr>
+																<tr>
+																	<th>MS AFP</th>
+																	<td>100</td>
+																	<td>100</td>
+																	<td>100</td>
+																	<td>100</td>
+																</tr>
+																<tr>
+																	<th>MS AFP</th>
+																	<td>100</td>
+																	<td>100</td>
+																	<td>100</td>
+																	<td>100</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</main>
 				</div>

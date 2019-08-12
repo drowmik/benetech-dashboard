@@ -48,4 +48,42 @@ const main = () => {
         $(this).siblings('input').val('').parent().removeClass('cross-show');
         $(this).remove();
     });
+
+    $('#reports-nav .reports-nav-item').on('click', ".nav-link", function(e){
+        e.stopPropagation();
+        // console.log($(e.currentTarget));
+        $('#reports-toggle-btns button:not(.collapsed)').addClass('collapsed').attr('aria-expanded', 'false');
+        $('.each-report-details .card-main-heading:not(.collapsed)').addClass('collapsed').attr('aria-expanded', 'false');
+        $('.tobecollapse.show').removeClass('collapsing show').addClass('collapse');
+    });
+
+    let $add_report = $('#add-reports-tab-btn');
+    $add_report.on('click', 'a', function (e) {
+        e.preventDefault();
+        console.log('prevented from js');
+        // add button on top
+        // add_report_btn('REQ_1234556', "Positive", "Interpreted");
+        
+    });
+
+    /* const add_report_btn = (req_nmb, report_state, report_status) => {
+        if (report_status.toLowerCase() === 'interpreted') {
+            let $cls = '';
+        } else if (report_status.toLowerCase() === 'pending') {
+            let $cls = 'report-pending';
+        } else {
+            let $cls = '';
+        }
+        $add_report.prepend(`
+            <li class="nav-item reports-nav-item">
+                <a class="nav-link d-block" href="#rnt-1" role="tab">
+                    <div class="d-flex">
+                        <span class="report-number">${req_nmb}</span>
+                        <span class="border border-danger text-danger report-badge">${report_state}</span>
+                    </div>
+                    <div class="report-status ${$cls}">${report_status}</div>
+                </a>
+            </li>
+        `);
+    } */
 }
