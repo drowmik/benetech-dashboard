@@ -1,0 +1,581 @@
+extends includes/base.pug
+
+block variables
+    - var title = "Patient Report";
+
+block append head_css
+    style(type='text/css').
+        .input-checkbox-toggle input[type=checkbox]:checked + label {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        }
+        .input-checkbox-toggle label {
+        width: 70px;
+        }
+
+block content
+    #reports-nav.d-flex.justify-content-between
+        ul.nav.nav-tabs(role="tablist")
+            li.nav-item.reports-nav-item
+                a.nav-link.d-block(href="#rnt-1", role="tab")
+                    .d-flex
+                        span.report-number REQ_191991191
+                        span.border.border-danger.text-danger.report-badge Positive
+                    .report-status Interpreted
+            li.nav-item.reports-nav-item
+                a.nav-link.d-block.active(href="#rnt-2", role="tab")
+                    .d-flex
+                        span.report-number REQ_191991191
+                        //-span.border.border-danger.text-danger.rounded.report-badge Positive
+                    .report-status.report-pending Pending
+            li#add-reports-tab-btn.reports-nav-item
+                a.bg-white.border(href="#")
+                    img(src="images/add-bordered.png")
+        .action-buttons.d-flex.align-items-center
+            .each-action-btn
+                a.btn.btn-warning.bt-btn(href="#") Interpret
+            .each-action-btn
+                a.btn.btn-info.bt-btn.d-flex.flex-row.align-items-center(href="#")
+                    span Report
+                    img(src="images/caret-down-white-square.png", alt="")
+            .each-action-btn
+                a.btn.btn-info.bt-btn(href="#")
+                    img(src="images/report/save.png", alt="")
+            .each-action-btn
+                a.btn.btn-info.bt-btn(href="#")
+                    img(src="images/report/menu.png", alt="")
+
+    .d-flex.flex-wrap#reports-toggle-btns
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .req-detail .tobecollapse") Requisition Detail
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .preg-detail .tobecollapse") Pregnancy Details
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .extc-fert .tobecollapse") Extracorporeal Fertilization (IVF)
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .ultr-obs .tobecollapse") Ultrasound Observations
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .gest-age .tobecollapse") Gestational Age Dating inputs
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .samp-detail .tobecollapse") Sample Details
+    #reports-tab-content.tab-content
+        #rnt-1.tab-pane.fade(role="tabpanel")
+            //-
+
+        #rnt-2.tab-pane.fade.show.active(role="tabpanel")
+            .row
+                .col-md-2.report-aside-column
+                    aside.bg-white
+                        h2.bg-primary.rounded.card-main-heading Summary:
+                        .card
+                            .card-body
+                                h3.card-title Patient Info:
+                                table.table.table-bordered
+                                    tr
+                                        th Name
+                                        td Field Flinstone
+                                    tr
+                                        th Patient ID
+                                        td 12344555555
+                                    tr
+                                        th DOB
+                                        td 05-05-05
+                                    tr
+                                        th Race
+                                        td Caucasian
+                        .card
+                            .card-body
+                                h3.card-title Marker Info:
+                                table.table.table-bordered
+                                    tr
+                                        th Name
+                                        th Value
+                                        th MoM
+                                    tr
+                                        td ASD
+                                        td 11
+                                        td 1.0
+                                    tr
+                                        td aksd
+                                        td 2345
+                                        td 2.33
+                                    tr
+                                        td KIok
+                                        td 0.2
+                                        td 293
+                        .card
+                            .card-body
+                                h3.card-title Risk List:
+                                .bt-pill-item.bt-pill-negative
+                                    span SLOSS
+                                    span Negative
+                                .bt-pill-item.bt-pill-negative
+                                    span SLOSS
+                                    span Negative
+                                .bt-pill-item.bt-pill-negative
+                                    span SLOSS
+                                    span Negative
+                                .bt-pill-item.bt-pill-positive
+                                    span SLOSS
+                                    span Positive
+                        .card
+                            .card-body
+                                h3.card-title Gestational Age(GA):
+                                table.table.table-bordered
+                                    tr
+                                        th Espected date of delovery
+                                        td 26-11-2014
+                                    tr 
+                                        th Age at EDD
+                                        td 26.6 years
+                                    tr
+                                        th GA (screening date)
+                                        td 15W + 5d
+
+                .col-md-10.report-main-column
+                    .row
+                        .col-md-12
+                            .personal-info.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-md-6
+                                            .row
+                                                .col-md-4
+                                                    .form-group
+                                                        label Patient Code
+                                                        input.form-control.cross-on-type(type="text", name="patient-code")
+                                                .col-md-4
+                                                    .form-group
+                                                        label Last Name
+                                                        input.form-control.cross-on-type(type="text", name="last-name")
+                                                .col-md-4
+                                                    .form-group
+                                                        label First Name
+                                                        input.form-control.cross-on-type(type="text", name="first-name")
+                                        .col-md-6
+                                            .row
+                                                .col-md-3
+                                                    .form-group
+                                                        label Birth Date
+                                                        input.form-control.jqui-datepicker(type="text", name="birth-date")
+                                                .col-md-3
+                                                    .form-group
+                                                        label Race
+                                                        select.form-control(name="race")
+                                                            option Caucasian
+                                                            option Asian
+                                                            option African
+                                                .col-md-3
+                                                    .form-group
+                                                        label User Defined
+                                                        input.form-control.cross-on-type(type="text", name="user-defined")
+                                                .col-md-3
+                                                    .form-group
+                                                        label Medicare
+                                                        input.form-control.cross-on-type(type="text", name="medicare")
+                                        .col-md-6
+                                            .row
+                                                .col-md-4
+                                                    .form-group
+                                                        label Phone number
+                                                        input.form-control.phn-mask(type="text", name="phone", placeholder="(____) __________")
+                                                .col-md-4
+                                                    .form-group
+                                                        label Country
+                                                        input.form-control.cross-on-type(type="text", name="country")
+                                                .col-md-4
+                                                    .form-group
+                                                        label City
+                                                        input.form-control.cross-on-type(type="text", name="city")
+                                        .col-md-6
+                                            .row
+                                                .col-md-3
+                                                    .form-group
+                                                        label State
+                                                        select.form-control(name="state")
+                                                            option Alaska
+                                                            option Florida
+                                                .col-md-5
+                                                    .form-group
+                                                        label Address_1
+                                                        .add-icon-right
+                                                            input.form-control(type="text", name="addr-1")
+                                                            .add-icon
+                                                                img(src="images/add.png")
+                                                .col-md-2
+                                                    .form-group
+                                                        label Postal Code
+                                                        input.form-control.cross-on-type(type="text", name="post-code")
+                                                .col-md-2
+                                                    .form-group
+                                                        label SIN
+                                                        input.form-control.cross-on-type(type="text", name="sin")
+
+                        .col-md-6
+                            .req-detail.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .req-detail .tobecollapse") Requisition Details
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label Requisition #
+                                                input.form-control.cross-on-type(type="text", name="requisition")
+                                        .col-md-4
+                                            .form-group
+                                                label LMP Date
+                                                input.form-control.jqui-datepicker(type="text", name="lmp-date")
+                                        .col-md-4
+                                            .form-group
+                                                label Lab Work Code
+                                                input.form-control.cross-on-type(type="text", name="lab-work-code")
+                                        .col-md-4
+                                            .form-group
+                                                label Doctor_1
+                                                .add-icon-right
+                                                    input.form-control(type="text", name="doctor-1")
+                                                    .add-icon
+                                                        img(src="images/add.png")
+                                        .col-md-4
+                                            .form-group
+                                                label Panel
+                                                select.form-control(type="text", name="panel")
+                                                    option MS AFP
+                                                    option GS AFP
+                                        .col-md-4
+                                            .form-group
+                                                label Status
+                                                select.form-control.cross-on-type(type="text")
+                                                    option Initual Sample
+                                                    option Sample
+                                        .col-md-6
+                                            .form-group
+                                                label Internal Note
+                                                textarea.form-control
+                                        .col-md-6
+                                            .form-group
+                                                label Printable Note
+                                                textarea.form-control
+
+                            .extc-fert.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .extc-fert .tobecollapse") Extracorporeal Fertilizations (IVF)
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-md-6
+                                            .row
+                                                .col-md-5
+                                                    .form-group
+                                                        label IDDM
+                                                        select.form-control(type="text", name="iddm")
+                                                            option Yes
+                                                            option No
+                                                            option Unknown
+                                                .col-md-7
+                                                    label Donor
+                                                    .input-checkbox-toggle(style="--dataLeft:'DOB';--dataRight:'Age'")
+                                                        input(type='checkbox')
+                                                        label
+                                        .col-md-6
+                                            .row
+                                                .col-md-5
+                                                    .form-group
+                                                        label Age
+                                                        input.form-control(type="number", name="age")
+                                                .col-md-7
+                                                    .custom-control.custom-checkbox
+                                                        input.custom-control-input#form-obtain-time-harvest(type="checkbox")
+                                                        label.custom-control-label(for="form-obtain-time-harvest") Obtained at time of harvest?
+                                            
+                                        .col-md-4
+                                            .form-group
+                                                label Harvest Date
+                                                input.form-control(type="text", disabled, value="05-30-88")
+                                        .col-md-4
+                                            .form-group
+                                                label Fertilization Date
+                                                input.form-control(type="text", disabled, value="05-30-88")
+                                        .col-md-4
+                                            .form-group
+                                                label Days in Vitro
+                                                input.form-control(type="text", disabled, value="05-30-88")
+                                        .col-md-4
+                                            .form-group
+                                                label Transfer Date
+                                                input.form-control(type="text", disabled, value="05-30-88")
+
+                            .gest-age.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .gest-age .tobecollapse") Gestational Age Dating Inputs
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label LMP Date
+                                                input.form-control.jqui-datepicker.cross-on-type(type="text", name="lmp-date")
+                                        .col-md-4
+                                            .form-group
+                                                label EDD
+                                                input.form-control.jqui-datepicker.cross-on-type(type="text", name="edd")
+                                        .col-md-4.d-flex.flex-column.justify-content-center
+                                            .custom-control.custom-checkbox
+                                                input.custom-control-input#form-determined-by-us(type="checkbox")
+                                                label.custom-control-label(for="form-determined-by-us") Determined by US
+                                        .col-md-4
+                                            .form-group
+                                                label Exam Date
+                                                input.form-control.jqui-datepicker.cross-on-type(type="text", name="exam-date")
+                                        .col-md-4.d-flex.flex-column.justify-content-center.count-box
+                                            .d-flex.align-items-center
+                                                input.form-control(type="number", name="gest-age-1", value="0")
+                                                span.px-1 +
+                                                input.form-control(type="number", name="gest-age-2", value="0")
+
+                            .samp-detail.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .samp-detail .tobecollapse") Sample Details
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                label Received Date
+                                                input.form-control.jqui-datepicker.cross-on-type(type="text", name="rec-dt")
+                                        .col-md-6
+                                            .form-group
+                                                label Specimen Date
+                                                input.form-control.jqui-datepicker.cross-on-type(type="text", name="spc-dt")
+                                        .col-md-4
+                                            .form-group
+                                                label Weight
+                                                input.form-control.cross-on-type(type="text", name="weight")
+                                        .col-md-4.d-flex.justify-content-center.flex-column
+                                            .input-checkbox-toggle(style="--dataLeft:'Killogram';--dataRight:'Pound'")
+                                                input(type='checkbox')
+                                                label
+                                        .col-md-6
+                                            .form-group
+                                                label By Reffering Lab
+                                                input.form-control.cross-on-type(type="text", name="reff-lab")
+                                        .col-md-6
+                                            .form-group
+                                                label By Assating Lab
+                                                input.form-control.cross-on-type(type="text", name="ass-lab")
+                                        .col-md-12.bt-card-view
+                                            h4 Gestational Age
+                                            .card
+                                                .card-body
+                                                    .d-flex.justify-content-between
+                                                        h3 Physical Exam
+                                                        a.btn.btn-warning.bt-btn(href="#") Change
+                                                    p.font-weight-bold.mb-0 17 week(s) 3 day(s)
+                                                    p.font-weight-bold 17 week(s) 3 day(s)
+                                                        span.font-weight-normal.pl-2 (As of Specimen Date)
+                                        .col-md-12
+                                            table.table.table-bordered.mt-4
+                                                thead
+                                                    tr
+                                                        th Marker
+                                                        th Result
+                                                        th Unit
+                                                        th Assay Date
+                                                        th MoM
+                                                tbody
+                                                    tr
+                                                        th MS AFP
+                                                        td 100
+                                                        td 100
+                                                        td 100
+                                                        td 100
+                                                    tr
+                                                        th MS AFP
+                                                        td 100
+                                                        td 100
+                                                        td 100
+                                                        td 100
+                                                    tr
+                                                        th MS AFP
+                                                        td 100
+                                                        td 100
+                                                        td 100
+                                                        td 100
+
+                        .col-md-6
+                            .preg-detail.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .preg-detail .tobecollapse") Pregnancy Details
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-12
+                                            h4 Maternal and Pregnancy History
+                                        .col-md-4
+                                            .form-group
+                                                label Para
+                                                input.form-control.cross-on-type(type="text", name="para")
+                                        .col-md-4
+                                            .form-group
+                                                label Gravida
+                                                input.form-control.cross-on-type(type="text", name="gravida")
+                                        .col-md-4
+                                            .form-group
+                                                label Multiple
+                                                select.form-control(type="text", name="multiple")
+                                                    option Singleton
+                                                    option Singleton2
+                                        .col-md-4
+                                            .form-group
+                                                label IDDM
+                                                select.form-control(type="text", name="iddm")
+                                                    option Yes
+                                                    option No
+                                        .col-md-4
+                                            .form-group
+                                                label Smoker
+                                                select.form-control(type="text", name="smoker")
+                                                    option Yes
+                                                    option No
+                                                    option Unknown
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label VPA
+                                                select.form-control(type="text", name="vpa")
+                                                    option Yes
+                                                    option No
+                                                    option Unknown
+                                        .col-md-4
+                                            .form-group
+                                                label SSRI
+                                                select.form-control(type="text", name="ssri")
+                                                    option Yes
+                                                    option No
+                                                    option Unknown
+                                        .col-md-4
+                                            .form-group
+                                                label CBZ
+                                                select.form-control(type="text", name="cbz")
+                                                    option Yes
+                                                    option No
+                                                    option Unknown
+                                        .col-md-4
+                                            .form-group
+                                                label DS HIST
+                                                select.form-control(type="text", name="ds-hist")
+                                                    option Yes
+                                                    option No
+                                                    option Unknown
+                                        .col-md-4
+                                            .form-group
+                                                label OSB HIST
+                                                select.form-control(type="text", name="dsb-hist")
+                                                    option Yes
+                                                    option No
+                                                    option Unknown
+                                        .col-md-12
+                                            .form-group
+                                                label Medications
+                                                textarea.form-control
+
+                            .ultr-obs.each-report-details
+                                h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .ultr-obs .tobecollapse") Ultrasound Observations
+                                .collapse.show.tobecollapse
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label U/S Date (GA)
+                                                input.form-control.cross-on-type(type="text", name="us-date-ga")
+                                        .col-md-8.d-flex.flex-column.justify-content-center.count-box
+                                            .d-flex.align-items-center.justify-content-center
+                                                span.text-right.pr-2 Gestitation Age:
+                                                .d-flex.align-items-center
+                                                    input.form-control(type="number", name="gest-age-1", value="0")
+                                                    span.px-1 +
+                                                    input.form-control(type="number", name="gest-age-2", value="0")
+                                        .col-md-4
+                                            .form-group
+                                                label Sonographer
+                                                select.form-control(name="sonographer", disabled)
+                                                    option 000 (Not Specified)
+                                        .col-md-4
+                                            .form-group
+                                                label Location
+                                                select.form-control(name="location", disabled)
+                                                    option 0
+                                        .col-md-4
+                                            .form-group
+                                                label Supervisor
+                                                select.form-control(name="supervisor", disabled)
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label CRL
+                                                select.form-control(name="crl", disabled)
+                                                    option 0,0
+                                        .col-md-8.d-flex.flex-column.justify-content-center.count-box
+                                            .d-flex.align-items-center.justify-content-center
+                                                span.text-right.pr-2 (2-100 mm)
+                                                .d-flex.align-items-center
+                                                    input.form-control(type="number", name="2-100mm-1", value="0")
+                                                    span.px-1 +
+                                                    input.form-control(type="number", name="2-100mm-2", value="0")
+                                        .col-md-4
+                                                label HC
+                                                input.form-control(type="text", name="hc", value="0,0", disabled)
+                                        .col-md-8.d-flex.flex-column.justify-content-center.count-box
+                                            .d-flex.align-items-center.justify-content-center
+                                                span.text-right.pr-2 (100-200 mm)
+                                                .d-flex.align-items-center
+                                                    input.form-control(type="number", name="100-200mm-1", value="0")
+                                                    span.px-1 +
+                                                    input.form-control(type="number", name="100-200mm-2", value="0")
+                                        .col-md-4
+                                            .form-group
+                                                label BPD
+                                                select.form-control(name="bpd", disabled)
+                                                    option 0,0
+                                        .col-md-8.d-flex.flex-column.justify-content-center.count-box
+                                            .d-flex.align-items-center.justify-content-center
+                                                span.text-right.pr-2 (15-72 mm)
+                                                .d-flex.align-items-center
+                                                    input.form-control(type="number", name="15-72mm-1", value="0")
+                                                    span.px-1 +
+                                                    input.form-control(type="number", name="15-72mm-2", value="0")
+                                        .col-md-4
+                                                label FL
+                                                input.form-control(type="text", name="fl", value="0,0", disabled)
+                                        .col-md-8.d-flex.flex-column.justify-content-center.count-box
+                                            .d-flex.align-items-center.justify-content-center
+                                                span.text-right.pr-2 (2-48 mm)
+                                                .d-flex.align-items-center
+                                                    input.form-control(type="number", name="2-48mm-1", value="0")
+                                                    span.px-1 +
+                                                    input.form-control(type="number", name="2-48mm-2", value="0")
+                                    .row
+                                        .col-12
+                                            h4 Fetal Markers
+                                        .col-md-4
+                                            .form-group
+                                                label Measured on
+                                                input.form-control(type="text", name="measured-on", disabled)
+                                        .col-md-4.d-flex.flex-column.justify-content-center
+                                            .custom-control.custom-checkbox
+                                                input.custom-control-input#form-use-ultrasound-date(type="checkbox")
+                                                label.custom-control-label(for="form-use-ultrasound-date") Use Ultrasound Date
+                                        .col-md-6
+                                            .row
+                                                .col-md-7
+                                                    .form-group
+                                                        label NT (mm)
+                                                        input.form-control(type="text", name="nt-mm", value="0.00", disabled)
+                                                .col-md-5
+                                                    .form-group
+                                                        label DPVI
+                                                        input.form-control(type="text", name="dpvi", value="0.0", disabled)
+                                        .col-md-6
+                                            .row
+                                                .col-md-6
+                                                    .form-group
+                                                        label Nasal Bone
+                                                        select.form-control(name="nasal-bone")
+                                                            option Unknown
+                                                            option Yes
+                                                            option No
+                                                .col-md-6
+                                                    .form-group
+                                                        label Black
+                                                        select.form-control(name="black")
+                                                            option Unknown
+                                                            option Yes
+                                                            option No
+
+
