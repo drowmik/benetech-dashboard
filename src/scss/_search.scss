@@ -27,19 +27,6 @@
                 font-weight: bold;
                 padding-left: 5 px;
             }
-            &.cross-show {
-                position: relative;
-                span {
-                    $sz: 14px;
-                    background-image: url('../images/cross-green.png');
-                    background-size: $sz $sz;
-                    width: $sz;
-                    height: $sz;
-                    position: absolute;
-                    right: 10px;
-                    bottom: 12px;
-                }
-            }
         }
         #filter-extra-btns {
             padding-left: calc(50px - 15px);

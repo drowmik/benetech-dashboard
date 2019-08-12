@@ -1,27 +1,298 @@
 #reports-nav{
     &>ul.nav {
         -webkit-overflow-scrolling: touch;
-        height: 100px; // change
-        width: 100%;
-        overflow-x: scroll;
+        //height: 100px; // change
+        width: 55%;
+        overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
         display: block;
-        //&::-webkit-scrollbar {
-            //display: none;
-        //}
-        &>li {
-            display: inline-block;
+        margin-top: 16px;
+        border-bottom: none;
+        //box-shadow: 3px 0 2px -2px #000;  // remove later
+        .reports-nav-item {
+            display: inline-flex;
             vertical-align: middle;
+            height: 100%;
+            .nav-link {
+                border-color: $report-border-color !important;
+                border-bottom-color: $primary-ver-2 !important;
+                &:not(.active) {
+                    background-color: #fff;
+                }
+                &.active {
+                    cursor: default;
+                    border-bottom-color: $bg-color-2 !important;
+                }
+                &>.d-flex {
+                    min-width: 316px;
+                    @extend .justify-content-between;
+                    line-height: 1.25;
+                    .report-number {
+                        @extend .open-sans;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $text-color-3;
+                    }
+                    .report-badge {
+                        padding: 4px 8px;
+                        border-radius: 28px;
+                    }
+                }
+                .report-status {
+                    @extend .open-sans;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $text-color-4;
+                    margin-top: 5px;
+                    &.report-pending {
+                        color: $primary;
+                    }
+                }
+            }
         }
         // width
         &::-webkit-scrollbar {
-            height: 4px;
+            height: 7px;
         }
         // Handle
         &::-webkit-scrollbar-thumb {
-            background: #d86058; 
+            background: #023d88; 
             border-radius: 10px;
+        }
+        #add-reports-tab-btn {
+            margin-right: 5px;
+            .nav-link{
+                padding: 15px;
+                @extend .rounded-T;
+                border-color: $report-border-color !important;
+                border-bottom-color: $primary-ver-2 !important;
+                img {
+                    width: 40px;
+                }
+            }
+        }
+    }
+    .action-buttons {
+        .each-action-btn {
+            margin-left: 10px;
+            &:nth-child(2) {
+                .btn {  // report button with image
+                    $p: 9px;
+                    padding-right: $p;
+                    position: relative;
+                    span {
+                        padding-right: 24px;
+                    }
+                    img {
+                        width: 22px;
+                        margin-left: $p;
+                    }
+                    &:after {
+                        content: '';
+                        width: 1px;
+                        height: 100%;
+                        display: block;
+                        background-color: #fff;
+                        position: absolute;
+                        right: 40px;
+                    }
+                }
+            }
+            &:nth-last-of-type(-n+2){
+                $sz: 48px;
+                flex: 0 0 $sz;
+                max-width: $sz;
+                height: $sz;
+                .btn{
+                    padding: 11px;
+                    img {
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#reports-toggle-btns {
+    border-top: 1px solid $primary-ver-2;
+    border-bottom: 1px solid $primary-ver-2;
+    margin: -1px;
+    padding: 14px 0 3px;
+    .btn {
+        padding: 10px;
+        background-color: #fff;
+        margin: 0 13px 13px 0;
+        &:not(.collapsed) {
+            background-color: $collapse-open-menu;
+        }
+    }
+}
+
+#reports-tab-content {
+    margin-top: 16px;
+    .card-main-heading {
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.25;
+        letter-spacing: 0.06em;
+        padding: 10px 24px;
+        margin-bottom: 0;
+    }
+    .table-bordered {
+        &,
+        th:first-child,
+        td:first-child {
+            border-color: $border-color-1;
+            border-left: none !important;
+        }
+        &,
+        th:last-child,
+        td:last-child {
+            border-color: $border-color-1;
+            border-right: none !important;
+        }
+    }
+    .tab-pane {
+        $rowcol-gap: 7px;
+        .row {
+            .report-aside-column {
+                margin-left: -#{$rowcol-gap};
+                margin-right: -#{$rowcol-gap};
+                aside {
+                    color: $text-color-2;
+                    .card-main-heading {
+                        margin-bottom: 26px;
+                    }
+                    .card {
+                        border: none !important;
+                        .card-body {
+                            padding: 0 13px 25px;
+                            .card-title {
+                                background-color: $bg-color-2;
+                                font-size: 18px;
+                                padding: 8px 7px;
+                                font-weight: bold;
+                                @extend .open-sans;
+                            }
+                            .table {
+                                & th,
+                                & td {
+                                    padding: 5px;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 1400px) {
+                        font-size: 12px;
+                        .card {
+                            .card-body {
+                                padding: 0 8px 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            .report-main-column {
+                padding-left: $rowcol-gap;
+                padding-right: $rowcol-gap;
+                .each-report-details {
+                    $pad: 24px;
+                    margin-bottom: 8px;
+                    .card-main-heading {
+                        position: relative;
+                        cursor: pointer;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 16px;
+                            height: 100%;
+                            display: block;
+                            top: 50%;
+                            right: $pad;
+                            transform: translateY(-50%) rotateZ(180deg);
+                            background: url('../images/caret-down-white.png') no-repeat center center;
+                            background-size: contain;
+                            transition: transform 0.2s linear;
+                        }
+                        &.collapsed {
+                            background-color: $primary-ver-2 !important;
+                            &:after{
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    .tobecollapse {
+                        $space: 6px;
+                        padding: $pad $pad - $space;
+                        margin-bottom: 20px;
+                        background-color: #fff;
+                        .row {
+                            margin-left: -#{$space};
+                            margin-right: -#{$space};
+                            [class^=col] {
+                                padding-left: $space;
+                                padding-right: $space;
+                            }
+                        }
+                        h4 {
+                            @extend .open-sans;
+                            font-size: 18px;
+                            font-weight: bold;
+                            line-height: 1.25;
+                            letter-spacing: 0.06em;
+                            color: $text-color-5;
+                            margin-bottom: 23px;
+                        }
+                        .form-group {
+                            margin-bottom: 24px;
+                            label, input, textarea, select {
+                                color: $text-color-2;
+                            }
+                            input, textarea, select {
+                                border: 1px solid $text-color-4;
+                            }
+                        }
+                        .bt-card-view {
+                            h4 {
+                                margin-bottom: 12px;
+                                margin-left: 12px;
+                                font-size: 18px;
+                                color: $text-color-3;
+                            }
+                            .card {
+                                background-color: $bg-info-lighter;
+                                .card-body {
+                                    h3 {
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                        color: $text-color-3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.samp-detail {
+                        .input-checkbox-toggle {
+                            $toggle-full-width: 100%;
+                            $toggle-left-width: 90px;
+                            input[type="checkbox"] {
+                                &:checked{
+                                    & + label {
+                                        margin-left: $toggle-left-width;
+                                        width: calc(#{$toggle-full-width} - #{$toggle-left-width});
+                                    }
+                                }
+                            }
+                            label {
+                                width: $toggle-left-width;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

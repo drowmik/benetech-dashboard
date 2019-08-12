@@ -11,21 +11,19 @@ $login_bg:          #f5f5f5;    // table bg
 
 
 
-$collapse_header_closed:#218fce;
+
 $active_input_border:#63d6a5; 
-$info2:             #d4f1ed;
-$collapse_open_menu:#cbe9f0;
 
 
-$text1_muted:       #9bb9bb;    //table_striped  // border
-$text3:             #4f7579;
+
+
+//$text1_muted:       #9bb9bb;    //table_striped  // border
 $text4:             #26c6da;
 $text5:             #63809f;
-$text6:             #00172c;
 
-$border_tab:        #a0a0a0;
+
 $border2:           #e6eaf0;
-$border3:           #e0e5ec;  // disable_prev/next_pagination
+
 $border4:           #90b8f9;
 $disable_input_bg:  #eef7fa;
 $table_border:      #dfeef5;
@@ -41,15 +39,25 @@ $bar_incomplete:    #11618f;
 
 // currently using in project
 $bg-color-2:             #eaf5f9;    //toggle_false_bg, disable_input_bg2, small_table_bg  //active pagination
+$bg-info-lighter:        #d4f1ed;
 
 $nav-bg:                 #023d88;
 $nav-item-active:        #3564a0;
 $nav-item-border-color:  #7697bf;
 
-$text-color: $body-color;
+$text-color:             $body-color;
 $text-color-2:           #115760;
 $text-color-3:           #4f7579;
+$text-color-4:           #9bb9bb;
+$text-color-5:           #00172c;
+
+$border-color-1:         #e0e5ec;  // disable_prev/next_pagination
 
 $pagination-border:      #f4f8fb;
 $login-input-border:     #4fcfdf;
 $login-link-color:       #26c6da; // $text4;
+
+$report-border-color:    #a0a0a0;
+$primary-ver-2:          #218fce;  //collapse_header_closed
+
+$collapse-open-menu:     #cbe9f0;

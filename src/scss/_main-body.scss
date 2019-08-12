@@ -1,7 +1,8 @@
 #bt-main-body{
+    $sidebar-width: 64px;
     #bt-sidebar {
-        flex: 0 0 64px;
-        max-width: 64px;
+        flex: 0 0 $sidebar-width;
+        max-width: $sidebar-width;
         padding-top: 64px;
         nav {
             ul {
@@ -17,8 +18,8 @@
             }
         }
     }
-
-    /* #bt-main {
-
-    } */
+    #bt-main {
+        flex: 0 0 calc(100% - #{$sidebar-width});
+        max-width: calc(100% - #{$sidebar-width});
+    }
 }

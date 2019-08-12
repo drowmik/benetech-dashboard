@@ -8,6 +8,9 @@ var log = console.log;
 
 
 const main = () => {
+    // phone number mask
+    $('.phn-mask').mask('(0000) 0000000000');
+
     $('#reports-nav .reports-nav-item>.nav-link').on('click', function (e) {
         e.preventDefault();
         $(this).tab('show');
