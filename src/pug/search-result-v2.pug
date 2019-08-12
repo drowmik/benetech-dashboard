@@ -1,0 +1,82 @@
+extends includes/base.pug
+
+block variables
+    - var title = "Search Result";
+
+block content
+    #filter-options.bg-primary.row
+        form.col-12(action="#")
+            .position-relative
+                .d-flex
+                    .row
+                        .col-md-3
+                            .form-group.mb-0
+                                input.form-control.cross-on-type(type="text", name="second-name", placeholder="Second Name")
+                        .col-md-3
+                            .form-group.mb-0
+                                input.form-control.cross-on-type(type="text", name="first-name", placeholder="First Name")
+                        .col-md-3
+                            .form-group.mb-0
+                                input.form-control.jqui-datepicker(type="text", name="birth-date", autocomplete="off", placeholder="Birth Date")
+                    
+                    .ml-auto
+                        a.btn.btn-info.bt-btn.mr-3(href="#") New Search
+                        button.btn.btn-warning.bt-btn(type="submit") Search
+
+    #search-content.px-3.mb-5
+        .mt-5.heading
+            h2.d-inline-block Search Patient:
+            span 333 333 results
+
+        #search-table-wrapper
+            table.table.table-responsive.table-striped.bg-white.text-center
+                thead.thead-primary.text-left
+                    tr
+                        th(scope='col') Pat.Code
+                        th(scope='col') Last Name
+                        th(scope='col') First Name
+                        th(scope='col') DOB
+                        th(scope='col') LMP
+                        th(scope='col') Panel
+                        th(scope='col') Status
+                        th(scope='col') Spec.Date
+                        th(scope='col') Specimen
+                        th(scope='col') Work Code
+                        th(scope='col') Worklist
+                tbody
+                    -for(i = 0; i < 12; i++)
+                        tr
+                            td PCODE_1000
+                            td Kamalidadadad
+                            td Anastas
+                            td 05-05-05
+                            td 05-05-05
+                            td MS QUAD
+                            td Inclomplete
+                            td 05-05-05
+                            td 05050500
+                            td WC_3333
+                            td 19819389-MO-1
+                    tr
+                        td(colspan="11")
+                            .d-flex.justify-content-end#search-pagination
+                                nav(aria-label='Pagination')
+                                    ul.pagination
+                                        li.page-item.disabled
+                                            a.page-link(href='#')
+                                                span.sr-only prev
+                                        li.page-item.active
+                                            span.page-link 1
+                                        li.page-item
+                                            a.page-link(href='#') 2
+                                        li.page-item
+                                            a.page-link(href='#') 3
+                                        li.page-item
+                                            span.page-link ...
+                                        li.page-item
+                                            a.page-link(href='#') 23
+                                        li.page-item
+                                            a.page-link(href='#')
+                                                span.sr-only next
+
+
