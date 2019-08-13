@@ -271,3 +271,9 @@ img {
         }
     }
 }
+
+.progress {
+    .progress-bar {
+        width: attr(aria-valuenow);
+    }
+}

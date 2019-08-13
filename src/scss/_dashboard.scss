@@ -1,0 +1,73 @@
+#dashboard-status-report {
+    .dashboard-summary {
+        $pad: 12px;
+        flex: 1 1 0;
+        padding: 2*$pad;
+        border-radius: $border-radius;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        @extend .open-sans;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+        &>.row {
+            &>[class^="col-"]{
+                &:first-child {
+                    padding-right: $pad;
+                }
+                &:last-child {
+                    padding-left: $pad;
+                }
+            }
+        }
+        .dashboard-status {
+            margin-bottom: 30px;
+        }
+        .dashboard-count {
+            font-size: 24px;
+        }
+        .dashboard-progress-bar {
+            margin: 15px 0;
+            .progress {
+                height: 3px;
+                background-color: $dashboard-bar-bgc;
+                .progress-bar {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    #dashboard-incomplete {
+        background-color: $dashboard-bgc-1;
+    }
+    #dashboard-pending {
+        background-color: $dashboard-bgc-2;
+    }
+    #dashboard-interpreted {
+        background-color: $dashboard-bgc-3;
+    }
+    #dashboard-suspended {
+        background-color: $dashboard-bgc-4;
+    }
+}
+
+#dashboard-all-charts {
+    .dlc-header {
+        border-bottom: 1px solid $text-color-4;
+        h3 {
+            font-size: 24px;
+            color: $text-color-2;
+        }
+        a {
+            padding: 20px 10px;
+            img {
+                width: 23px;
+            }
+        }
+    }
+    .dashboard-chart {
+        margin: 15px 0;
+        padding-bottom: 20px;
+    }
+}

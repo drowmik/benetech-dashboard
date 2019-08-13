@@ -28,13 +28,6 @@ $border4:           #90b8f9;
 $disable_input_bg:  #eef7fa;
 $table_border:      #dfeef5;
 
-// graph
-$type1:             #1ca2ee;
-// - $type2:             $primary;
-$type3:             #1b78ad;
-$type4:             #4caf50;
-$bar_incomplete:    #11618f;
-
 
 
 // currently using in project
@@ -61,3 +54,10 @@ $report-border-color:    #a0a0a0;
 $primary-ver-2:          #218fce;  //collapse_header_closed
 
 $collapse-open-menu:     #cbe9f0;
+
+//graph
+$dashboard-bgc-1:             #1ca2ee;
+$dashboard-bgc-2:             $primary;
+$dashboard-bgc-3:             #1b78ad;
+$dashboard-bgc-4:             #4caf50;
+$dashboard-bar-bgc:           rgba(0, 0, 0, 0.4);
