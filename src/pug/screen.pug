@@ -35,8 +35,8 @@ block content
                 a.btn.btn-info.bt-btn(href="#")
                     img(src="images/report/menu.png", alt="")
 
-    .d-flex.flex-wrap#reports-toggle-btns
-        button.btn.btn-default.collapsed(type="button", data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
+    //-.d-flex.flex-wrap#reports-toggle-btns
+        button.btn.btn-default(type="button", data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
         button.btn.btn-default.collapsed(type="button", data-toggle="collapse", data-target=".tab-pane.active .req-detail .tobecollapse") Requisition Detail
         button.btn.btn-default.collapsed(type="button", data-toggle="collapse", data-target=".tab-pane.active .preg-detail .tobecollapse") Pregnancy Details
         button.btn.btn-default.collapsed(type="button", data-toggle="collapse", data-target=".tab-pane.active .extc-fert .tobecollapse") Extracorporeal Fertilization (IVF)
@@ -116,8 +116,8 @@ block content
 
                 .col-md-10.report-main-column
                     .personal-info.each-report-details
-                        h2.bg-primary.rounded.card-main-heading.collapsed(data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
-                        .collapse.tobecollapse
+                        h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
+                        .collapse.show.tobecollapse
                             .row
                                 .col-md-6
                                     .row
@@ -631,8 +631,8 @@ block content
 
                 .col-md-10.report-main-column
                     .personal-info.each-report-details
-                        h2.bg-primary.rounded.card-main-heading.collapsed(data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
-                        .collapse.tobecollapse
+                        h2.bg-primary.rounded.card-main-heading(data-toggle="collapse", data-target=".tab-pane.active .personal-info .tobecollapse") Personal Information
+                        .collapse.show.tobecollapse
                             .row
                                 .col-md-6
                                     .row

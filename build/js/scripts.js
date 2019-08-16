@@ -55,6 +55,10 @@ const main = () => {
         $('#reports-toggle-btns button:not(.collapsed)').addClass('collapsed').attr('aria-expanded', 'false');
         $('.each-report-details .card-main-heading:not(.collapsed)').addClass('collapsed').attr('aria-expanded', 'false');
         $('.tobecollapse.show').removeClass('collapsing show').addClass('collapse');
+        
+        // show "personal info" opened
+        $('.personal-info>h2').removeClass('collapsed');
+        $('.personal-info>.tobecollapse').addClass('show');
     });
 
     let $add_report = $('#add-reports-tab-btn');
