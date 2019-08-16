@@ -7,21 +7,23 @@ block content
     #filter-options.bg-primary.row
         form.col-12(action="#")
             .position-relative
-                .d-flex
-                    .row
-                        .col-md-3
-                            .form-group.mb-0
-                                input.form-control.cross-on-type(type="text", name="second-name", placeholder="Second Name")
-                        .col-md-3
-                            .form-group.mb-0
-                                input.form-control.cross-on-type(type="text", name="first-name", placeholder="First Name")
-                        .col-md-3
-                            .form-group.mb-0
-                                input.form-control.jqui-datepicker(type="text", name="birth-date", autocomplete="off", placeholder="Birth Date")
-                    
-                    .ml-auto
-                        a.btn.btn-info.bt-btn.mr-3(href="#") New Search
-                        button.btn.btn-warning.bt-btn(type="submit") Search
+                .row
+                    .col-xl-6
+                        .row.justify-content-center
+                            .col-md-3
+                                .form-group.mb-0
+                                    input.form-control.cross-on-type(type="text", name="second-name", placeholder="Second Name")
+                            .col-md-3
+                                .form-group.mb-0
+                                    input.form-control.cross-on-type(type="text", name="first-name", placeholder="First Name")
+                            .col-md-3
+                                .form-group.mb-0
+                                    input.form-control.jqui-datepicker(type="text", name="birth-date", autocomplete="off", placeholder="Birth Date")
+                    .col-xl-6
+                        .d-flex.w-100
+                            .mx-auto.mt-4.mt-xl-0.ml-xl-auto
+                                a.btn.btn-info.bt-btn.mr-3(href="#") New Search
+                                button.btn.btn-warning.bt-btn(type="submit") Search
 
     #search-content.px-3.mb-5
         .mt-5.heading

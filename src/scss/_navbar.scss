@@ -111,12 +111,12 @@ header#header {
             margin: 10px auto;
         }
         .navbar-expand-lg{
+            flex-flow: wrap;
             .navbar-nav {
                 flex-direction: row;
                 width: 100%;
                 justify-content: center;
                 margin-bottom: 15px;
-
             }
             .navbar-toggler {
                 display: none;
