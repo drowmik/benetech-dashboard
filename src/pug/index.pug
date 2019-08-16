@@ -21,7 +21,7 @@ block main_body
                 .col-md-6
                     #login-form.d-flex.justify-content-center.align-items-center
                         form(action="dashboard.html")
-                            h1 Log in
+                            h1 Welcome to PRA
                             .form-group
                                 label Username
                                 input.form-control(type='text' placeholder='Enter your login', required)
@@ -29,5 +29,7 @@ block main_body
                                 label Password
                                 input.form-control(type='password' placeholder='Enter your password', required)
                             .form-group.d-flex.justify-content-between.align-items-center
-                                a.btn-link(href="#") Forgot Password?
-                                button.btn.btn-warning.bt-btn Log in
+                                .d-flex
+                                    a.btn-link.mr-2(href="#") New Registration
+                                    a.btn-link(href="#") Forgot Password?
+                                button.btn.btn-warning.bt-btn.text-uppercase Log in

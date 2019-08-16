@@ -15,9 +15,9 @@
         font-weight: bold;
         font-size: 18px;
         @extend .open-sans;
-        &:not(:last-child) {
+        /* &:not(:last-child) {
             // margin-right: 25px;
-        }
+        } */
         &>.row {
             &>[class^="col-"]{
                 &:first-child {
