@@ -104,3 +104,29 @@ header#header {
         }
     }
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    #header {
+        .navbar-brand {
+            margin: 10px auto;
+        }
+        .navbar-expand-lg{
+            .navbar-nav {
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 15px;
+
+            }
+            .navbar-toggler {
+                display: none;
+            }
+        }
+        #main-menu-top {
+            padding-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
