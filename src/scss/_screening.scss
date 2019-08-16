@@ -298,3 +298,14 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+    #reports-nav {
+        flex-wrap: wrap-reverse;
+        &>ul.nav {
+            width: 100%;
+        }
+        .action-buttons {
+            margin: 20px auto 10px;
+        }
+    }
+}

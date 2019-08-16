@@ -9,7 +9,7 @@ block content
             .position-relative
                 .row
                     .col-xl-6
-                        .row.justify-content-center
+                        .row.justify-content-center.justify-content-xl-start
                             .col-md-3
                                 .form-group.mb-0
                                     input.form-control.cross-on-type(type="text", name="second-name", placeholder="Second Name")
@@ -21,7 +21,7 @@ block content
                                     input.form-control.jqui-datepicker(type="text", name="birth-date", autocomplete="off", placeholder="Birth Date")
                     .col-xl-6
                         .d-flex.w-100
-                            .mx-auto.mt-4.mt-xl-0.ml-xl-auto
+                            .mx-auto.mt-4.mt-xl-0.ml-xl-auto.mr-xl-0
                                 a.btn.btn-info.bt-btn.mr-3(href="#") New Search
                                 button.btn.btn-warning.bt-btn(type="submit") Search
 
@@ -31,7 +31,7 @@ block content
             span 333 333 results
 
         #search-table-wrapper
-            table.table.table-responsive.table-striped.bg-white.text-center
+            table.table.table-striped.bg-white.text-center
                 thead.thead-primary.text-left
                     tr
                         th(scope='col') Pat.Code

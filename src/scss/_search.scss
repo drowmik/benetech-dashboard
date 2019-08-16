@@ -136,12 +136,23 @@
                 }
             }
             .thead-primary {
-    th {
-        color: $white;
-        background-color: $primary;
-        border: none;
+                th {
+                    color: $white;
+                    background-color: $primary;
+                    border: none;
+                }
+            }
+        }
     }
 }
+
+@media (max-width: 1199px) {
+    #search-table-wrapper {
+        .table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
     }
 }
