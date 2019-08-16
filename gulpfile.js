@@ -1,3 +1,10 @@
+/**********************************************
+** *** Developer: Debashis Roy Bhowmik *** ****
+* *** Email: debashis.buet08@gmail.com *** ****
+********* *** Website: debashis.me *** ********
+* *** Github: https://github.com/wall-e-08/ ***
+***********************************************/
+
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');

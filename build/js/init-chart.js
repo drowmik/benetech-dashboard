@@ -1,5 +1,20 @@
 'use strict'
 
+/**********************************************
+** *** Developer: Debashis Roy Bhowmik *** ****
+* *** Email: debashis.buet08@gmail.com *** ****
+********* *** Website: debashis.me *** ********
+* *** Github: https://github.com/wall-e-08/ ***
+***********************************************/
+
+/*
+* Jquery chart js
+* documentation: https://www.chartjs.org/
+* using 2 types here:
+* https://www.chartjs.org/samples/latest/charts/line/basic.html
+* https://www.chartjs.org/samples/latest/charts/pie.html
+*/
+
 
 var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var line_chart_config = {

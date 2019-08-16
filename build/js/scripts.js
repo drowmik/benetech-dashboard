@@ -1,3 +1,9 @@
+/**********************************************
+** *** Developer: Debashis Roy Bhowmik *** ****
+* *** Email: debashis.buet08@gmail.com *** ****
+********* *** Website: debashis.me *** ********
+* *** Github: https://github.com/wall-e-08/ ***
+***********************************************/
 var log = console.log;
 
 (function ($) {
